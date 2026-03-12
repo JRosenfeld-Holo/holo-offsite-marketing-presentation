@@ -23,13 +23,12 @@ export const SLIDES: SlideDefinition[] = [
   { id: 14, label: 'Verkada', labelKey: 'slide.verkada', section: 'social-proof' },
   { id: 15, label: "Farmer's Fridge", labelKey: 'slide.farmersFridge', section: 'social-proof' },
   { id: 16, label: 'SundayPower', labelKey: 'slide.sundayPower', section: 'social-proof' },
-  { id: 17, label: 'Protect/Deploy/Manage', labelKey: 'slide.capabilities1', section: 'capabilities' },
-  { id: 18, label: 'Optimize/Secure/Scale', labelKey: 'slide.capabilities2', section: 'capabilities' },
-  { id: 19, label: 'Supercharge IoT', labelKey: 'slide.supercharge', section: 'capabilities' },
-  { id: 20, label: 'Product Demo', labelKey: 'slide.demo', section: 'demo' },
-  { id: 21, label: 'Tailored Plan', labelKey: 'slide.tailored', section: 'cta' },
-  { id: 22, label: 'Pricing Calculator', labelKey: 'slide.calculator', section: 'pricing' },
-  { id: 23, label: 'Stay Connected', labelKey: 'slide.contact', section: 'cta' },
+  { id: 17, label: 'Platform Capabilities', labelKey: 'slide.capabilities1', section: 'capabilities' },
+  { id: 18, label: 'Supercharge IoT', labelKey: 'slide.supercharge', section: 'capabilities' },
+  { id: 19, label: 'Product Demo', labelKey: 'slide.demo', section: 'demo' },
+  { id: 20, label: 'Tailored Plan', labelKey: 'slide.tailored', section: 'cta' },
+  { id: 21, label: 'Pricing Calculator', labelKey: 'slide.calculator', section: 'pricing' },
+  { id: 22, label: 'Stay Connected', labelKey: 'slide.contact', section: 'cta' },
 ]
 
 export const TOTAL_SLIDES = SLIDES.length

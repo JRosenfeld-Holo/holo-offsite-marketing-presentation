@@ -19,14 +19,14 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' } },
 }
 
-function StarRating() {
+function StarRating({ count = 5 }: { count?: number }) {
   return (
     <div style={{ display: 'flex', gap: 2, marginBottom: 8 }}>
       {[1, 2, 3, 4, 5].map((star) => (
         <svg key={star} width="13" height="13" viewBox="0 0 13 13" fill="none">
           <path
             d="M6.5 1L7.983 4.928L12.163 5.243L9.075 7.872L10.059 11.957L6.5 9.75L2.941 11.957L3.925 7.872L0.837 5.243L5.017 4.928L6.5 1Z"
-            fill="#bffd11"
+            fill={star <= count ? '#bffd11' : 'rgba(191,253,17,0.18)'}
           />
         </svg>
       ))}
@@ -42,10 +42,10 @@ export default function SlideSupport(_: SlideProps) {
     { title: t('support.feat3.title'), description: t('support.feat3.detail') },
   ]
   const reviews = [
-    { quote: t('support.review1') },
-    { quote: t('support.review2') },
-    { quote: t('support.review3') },
-    { quote: t('support.review4') },
+    { quote: t('support.review1'), stars: 5 },
+    { quote: t('support.review2'), stars: 5 },
+    { quote: t('support.review3'), stars: 4 },
+    { quote: t('support.review4'), stars: 5 },
   ]
   return (
     <div
@@ -293,7 +293,7 @@ export default function SlideSupport(_: SlideProps) {
                 position: 'relative',
               }}
             >
-              <StarRating />
+              <StarRating count={review.stars} />
               <p
                 style={{
                   fontSize: 13,

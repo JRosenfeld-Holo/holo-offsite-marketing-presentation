@@ -1,4 +1,4 @@
-export type Language = 'en' | 'es'
+export type Language = 'en' | 'es' | 'it' | 'sv' | 'de'
 
 const en = {
     // ─── Nav / UI ───────────────────────────────────────────────────────────────
@@ -496,4 +496,748 @@ const es: typeof en = {
     'contact.cta': 'Comenzar →',
 }
 
-export const translations: Record<Language, typeof en> = { en, es }
+const it: typeof en = {
+    // ─── Nav / UI ───────────────────────────────────────────────────────────────
+    'nav.edit': '+ MODIFICA',
+    'nav.toc': 'INDICE',
+    'nav.skip': 'Salta',
+    'nav.startPresentation': 'Avvia presentazione',
+
+    // ─── Slide labels (TOC) ────────────────────────────────────────────────────
+    'slide.cover': 'Copertina',
+    'slide.whatIsHologram': "Cos'è Hologram?",
+    'slide.theProblem': 'Il Problema',
+    'slide.businessRisk': 'Rischio Aziendale',
+    'slide.roi': 'ROI Misurabile',
+    'slide.platform': 'Piattaforma Hologram',
+    'slide.hyperSIMs': 'Hyper SIMs',
+    'slide.outageProtection': 'Protezione Interruzioni',
+    'slide.nativeProfiles': 'Profili Nativi',
+    'slide.softwareAPI': 'Software e API',
+    'slide.support': 'Supporto Esperto',
+    'slide.security': 'Sicurezza',
+    'slide.globalCoverage': 'Copertura Globale',
+    'slide.customers': 'Clienti',
+    'slide.verkada': 'Verkada',
+    'slide.farmersFridge': "Farmer's Fridge",
+    'slide.sundayPower': 'Sunday Power',
+    'slide.capabilities1': 'Proteggi/Distribuisci/Gestisci',
+    'slide.capabilities2': 'Ottimizza/Proteggi/Scala',
+    'slide.supercharge': 'Potenzia IoT',
+    'slide.demo': 'Demo del Prodotto',
+    'slide.tailored': 'Piano Personalizzato',
+    'slide.calculator': 'Calcolatore Prezzi',
+    'slide.contact': 'Rimani Connesso',
+
+    // ─── Personalization modal ─────────────────────────────────────────────────
+    'modal.title': 'Personalizza questa presentazione',
+    'modal.companyName': 'Nome Azienda',
+    'modal.companyPlaceholder': "Nome dell'azienda del cliente",
+    'modal.aeName': 'Il Tuo Nome (AE)',
+    'modal.aeNamePlaceholder': 'Nome Account Executive',
+    'modal.aeEmail': 'La Tua Email',
+    'modal.aeEmailPlaceholder': 'tua.email@hologram.io',
+    'modal.aePhone': 'Il Tuo Telefono',
+    'modal.aePhonePlaceholder': '+1 (555) 123-4567',
+
+    // ─── Slide 1: Cover ────────────────────────────────────────────────────────
+    'cover.outage': 'A Prova',
+    'cover.proof': 'di Guasti',
+    'cover.line2': 'Connettività Cellulare',
+    'cover.line3': 'Che Funziona Sempre.',
+    'cover.subtitle': "L'unica piattaforma di connettività IoT che blocca le interruzioni prima che accadano",
+    'cover.preparedFor': 'Preparato esclusivamente per',
+
+    // ─── Slide 2: What is Hologram? ────────────────────────────────────────────
+    'what.eyebrow': "Cos'è Hologram?",
+    'what.headline': 'Connettività cellulare a prova di guasto',
+    'what.headlineAccent': 'per IoT',
+    'what.body': "L'unica piattaforma completa di connettività IoT che blocca le interruzioni prima che inizino — così puoi distribuire, gestire e scalare dispositivi globalmente con un'affidabilità che protegge il tuo bilancio.",
+    'what.pillar.hyperSIMs': 'Hyper SIMs',
+    'what.pillar.hyperSIMs.detail': 'SIM eUICC multi-core con cambio profilo su richiesta e tecnologia di backup integrata.',
+    'what.pillar.globalCoverage': 'Copertura Globale',
+    'what.pillar.globalCoverage.detail': 'Ridondanza multi-operatore in 190+ paesi, mantenendo i dispositivi connessi ovunque.',
+    'what.pillar.outageProtection': 'Protezione Interruzioni',
+    'what.pillar.outageProtection.detail': 'Tecnologia di backup brevettata con core hardware separati che commutano istantaneamente in caso di guasto.',
+    'what.pillar.dashboardAPI': 'Dashboard e API',
+    'what.pillar.dashboardAPI.detail': "Gestione completa della flotta con monitoraggio in tempo reale, analisi dell'utilizzo e una potente API REST.",
+    'what.stat.customers': 'Clienti',
+    'what.stat.countries': 'Paesi',
+    'what.stat.carriers': 'Operatori',
+    'what.stat.uptime': 'Uptime',
+
+    // ─── Slide 3: The Problem ──────────────────────────────────────────────────
+    'problem1.eyebrow': 'Il problema con la maggior parte dei provider di connettività',
+    'problem1.headline': 'La maggior parte dei provider di connettività è una responsabilità, non una risorsa.',
+    'problem1.card1.title': 'Connettività inaffidabile',
+    'problem1.card1.items': 'Interruzioni frequenti|Copertura discontinua|Bassa velocità|Alta latenza|Dipendenza da un unico operatore',
+    'problem1.card2.title': 'Flussi di lavoro complicati',
+    'problem1.card2.items': 'Relazioni con più operatori|Processi manuali lenti|Risoluzione problemi su piattaforme multiple|Requisiti di conformità regionali|Report e fatturazione frammentati',
+    'problem1.card3.title': 'Software frustrante',
+    'problem1.card3.items': "Nessuna visibilità sullo stato del dispositivo|API limitate o inesistenti|Nessuna analisi della causa principale|Interfacce confuse|Non integrabile con sistemi esistenti",
+
+    // ─── Slide 4: Business Risk ────────────────────────────────────────────────
+    'problem2.eyebrow': 'Il problema con la maggior parte dei provider di connettività',
+    'problem2.headline': 'Il tuo provider protegge i tuoi ricavi o li mette a rischio?',
+    'problem2.risk1': 'Ogni minuto di downtime significa transazioni perse, dati mancanti e clienti insoddisfatti.',
+    'problem2.risk2': 'Un time-to-market lento ritarda i ricavi mentre i dispositivi restano in magazzino anziché generare valore.',
+    'problem2.risk3': 'Le operazioni inefficienti drenano risorse che potrebbero essere investite nella crescita.',
+    'problem2.risk4': 'Il churn dei clienti aumenta quando i problemi di connettività erodono la fiducia nel tuo prodotto.',
+
+    // ─── Slide 5: ROI ──────────────────────────────────────────────────────────
+    'roi.eyebrow': 'Come si distingue Hologram?',
+    'roi.headline': 'Chiunque può venderti una SIM. Hologram offre ROI misurabile.',
+    'roi.body': 'Da una riduzione del 50% dei costi di connettività a un uptime garantito che protegge i flussi di ricavi...',
+    'roi.stat1.label': 'RIDUZIONE MEDIA DEI COSTI DI CONNETTIVITÀ',
+    'roi.stat2.label': 'UPTIME STORICO, 99.95% GARANTITO DA SLA',
+    'roi.stat3.label': 'DI DATI TRASMESSI GIORNALMENTE',
+    'roi.stat4.label': 'AZIENDE SI AFFIDANO A HOLOGRAM',
+    'roi.quote1': 'Il ROI con Hologram è stato eccezionale. Siamo riusciti a dimezzare le nostre bollette IoT.',
+    'roi.quote2': 'La flessibilità di Hologram ci ha aiutato a evitare downtime nonostante le interruzioni di AT&T e Verizon.',
+
+    // ─── Slide 6: Platform ─────────────────────────────────────────────────────
+    'platform.eyebrow': 'Piattaforma Hologram',
+    'platform.headline': 'Distribuisci più veloce. Scala in modo intelligente. Connettiti ovunque.',
+    'platform.subtitle': "L'unica piattaforma di connettività che blocca le interruzioni prima che accadano, così puoi concentrarti sullo sviluppo anziché sulla risoluzione dei problemi.",
+    'platform.feat1.title': 'Una sola SIM — 190+ paesi, 550+ operatori',
+    'platform.feat1.detail': 'Una SIM che funziona ovunque. Nessuna necessità di gestire più relazioni con gli operatori.',
+    'platform.feat2.title': 'Protezione interruzioni — 99.95% uptime garantito',
+    'platform.feat2.detail': 'SIM multi-core con tecnologia di failover automatico. I tuoi dispositivi rimangono online.',
+    'platform.feat3.title': 'API per sviluppatori — API REST amata dai dev',
+    'platform.feat3.detail': 'Integra perfettamente con i tuoi sistemi esistenti tramite la nostra API REST completamente documentata.',
+    'platform.simLabel': 'Scheda Hyper SIM',
+    'platform.simDetail': 'eUICC multi-profilo con orchestrazione intelligente',
+
+    // ─── Slide 7: Hyper SIMs ───────────────────────────────────────────────────
+    'hyper.eyebrow': 'Caratteristiche Hologram',
+    'hyper.headline': 'Hyper SIMs',
+    'hyper.subtitle': 'Connettività eUICC multi-core, reinventata',
+    'hyper.feat1.title': 'Copertura globale',
+    'hyper.feat1.detail': 'Accedi a 550+ operatori in 190+ paesi. Le Hyper SIM si collegano automaticamente al segnale più forte.',
+    'hyper.feat2.title': 'Connettività personalizzabile',
+    'hyper.feat2.detail': 'Cambia profilo automaticamente o su richiesta per ottimizzare costo, prestazioni e copertura.',
+    'hyper.feat3.title': 'Pronto per il futuro',
+    'hyper.feat3.detail': 'Invia aggiornamenti OTA durante tutto il ciclo di vita del dispositivo. Niente più sostituzioni di SIM.',
+    'hyper.feat4.title': 'Prestazioni fulminee',
+    'hyper.feat4.detail': 'Latenza fino a 50ms per trasferimento dati quasi istantaneo e operazioni senza interruzioni.',
+
+    // ─── Slide 8: Outage Protection ────────────────────────────────────────────
+    'outage.eyebrow': 'Caratteristiche Hologram',
+    'outage.headline': 'Protezione Interruzioni',
+    'outage.subtitle': 'Mantieni online i dispositivi mission-critical',
+    'outage.feat1.title': 'SIM multi-core con tecnologia Fallback',
+    'outage.feat1.detail': "Le Hyper SIM di Hologram contengono più core — un core primario che si connette alla rete del tuo operatore preferito e un core di backup che si attiva automaticamente se il primario subisce un'interruzione. La tecnologia Fallback monitora la qualità del segnale in tempo reale e commuta in modo trasparente, senza intervento manuale.",
+    'outage.feat2.title': 'La sola garanzia di uptime del settore',
+    'outage.feat2.detail': "99.95% di uptime, garantito contrattualmente. L'uptime storico è del 99.99%. Nessun altro provider di connettività lo mette per iscritto.",
+    'outage.callout': '99.99% Uptime Storico',
+    'outage.callout.sub': '99.95% Garantito da SLA',
+    'outage.roaming': 'Roaming',
+    'outage.roaming.detail': "Condivide lo stesso core fisico. Se l'operatore cede, resti senza connessione.",
+    'outage.fallback': 'Fallback',
+    'outage.fallback.detail': "Un'interruzione primaria attiva la commutazione istantanea al backup. Core hardware separati.",
+    'outage.step1': 'Rete primaria attiva',
+    'outage.step1.status': 'MONITORAGGIO',
+    'outage.step2': 'Fallback attivato istantaneamente',
+    'outage.step2.status': 'COMMUTAZIONE',
+
+    // ─── Slide 9: Native Profiles ──────────────────────────────────────────────
+    'native.eyebrow': 'Caratteristiche Hologram',
+    'native.headline': 'Profili Operatore Nativi',
+    'native.subtitle': "Accesso diretto all'operatore, non roaming generico",
+
+    // ─── Slide 10: Software & API ──────────────────────────────────────────────
+    'software.eyebrow': 'Caratteristiche Hologram',
+    'software.headline': 'Software e API Potenti',
+    'software.subtitle': 'Visibilità e controllo completi della flotta',
+    'software.feat1.title': 'Informazioni actionable in tempo reale',
+    'software.feat1.detail': "Visualizza ogni aspetto della connettività della tua flotta. Analytics completi ti aiutano a individuare i dispositivi problematici.",
+    'software.feat2.title': 'Gestione dispositivi semplice',
+    'software.feat2.detail': "Monitora, risolvi e agisci su uno o tutti i tuoi dispositivi. Sospendi l'utilizzo dei dati e imposta limiti.",
+    'software.feat3.title': 'API amata dagli sviluppatori',
+    'software.feat3.detail': 'Collega facilmente e in sicurezza i tuoi dati alle applicazioni esistenti tramite la nostra API REST.',
+    'software.feat4.title': 'Attivazione senza sforzo',
+    'software.feat4.detail': 'Pochi clic e i tuoi dispositivi sono operativi — che siano uno o centomila.',
+
+    // ─── Slide 11: Support ─────────────────────────────────────────────────────
+    'support.eyebrow': 'Caratteristiche Hologram',
+    'support.headline': 'Supporto da veri esperti',
+    'support.subtitle': 'Supporto pratico da ingegneri che risolvono i problemi di connettività, non persone che inoltrano ticket.',
+    'support.feat1.title': 'Solution Engineer Dedicati',
+    'support.feat1.detail': 'Parla direttamente con ingegneri, non con rappresentanti che leggono da copioni.',
+    'support.feat2.title': 'Risposta rapida e affidabile',
+    'support.feat2.detail': 'Offriamo copertura di supporto clienti 24/7 con SLA garantiti.',
+    'support.feat3.title': 'Profonda competenza in connettività',
+    'support.feat3.detail': 'I nostri ingegneri hanno decenni di esperienza combinata in reti cellulari, hardware, firmware e protocolli IoT.',
+    'support.review1': 'Passati a Hologram e non ci siamo mai voltati indietro – prestazioni eccellenti',
+    'support.review2': 'Collaborazione straordinaria con Hologram',
+    'support.review3': 'Il team di supporto Hologram è professionale e competente',
+    'support.review4': 'Molto facile da collaborare e super affidabile',
+    'support.g2': 'Recensione G2',
+    'support.online': 'Online',
+
+    // ─── Slide 12: Security ────────────────────────────────────────────────────
+    'security.eyebrow': 'Caratteristiche Hologram',
+    'security.headline': 'Sicurezza di Livello Enterprise',
+    'security.subtitle': 'Proteggi la tua flotta e i tuoi dati',
+
+    // ─── Slide 13: Globe ───────────────────────────────────────────────────────
+    'globe.eyebrow': 'Rete Hologram',
+    'globe.headline': 'Copertura Globale',
+    'globe.headlineAccent': 'Mappa',
+
+    // ─── Slide 14: Customers ───────────────────────────────────────────────────
+    'customers.eyebrow': 'Scelto dai leader del settore',
+    'customers.headline': 'Connettività per',
+    'customers.headlineAccent': '6.000+ aziende',
+
+    // ─── Slides 15–17: Case studies ────────────────────────────────────────────
+    'case.eyebrow': 'Successi dei clienti',
+    'case.challenge': 'Sfida',
+    'case.solution': 'Soluzione',
+
+    // ─── Slides 18–19: Capabilities ────────────────────────────────────────────
+    'cap.eyebrow': 'Come si distingue Hologram?',
+    'cap.headline': 'Hologram è progettato per le esigenze del',
+    'cap.headlineAccent': 'IoT moderno',
+    'cap.headlineSuffix': 'dispositivi e team.',
+    'cap.protect': 'Proteggere',
+    'cap.deploy': 'Distribuire',
+    'cap.manage': 'Gestire',
+    'cap.optimize': 'Ottimizzare',
+    'cap.secure': 'Mettere in Sicurezza',
+    'cap.scale': 'Scalare',
+    'cap.protect.desc': 'Prevenire le interruzioni prima che impattino i tuoi profitti con la tecnologia multi-core.',
+    'cap.deploy.desc': 'Lancia dispositivi IoT ovunque con una soluzione SIM unica che funziona in 190+ paesi.',
+    'cap.manage.desc': 'Controlla le tue operazioni tramite software enterprise con visibilità in tempo reale.',
+    'cap.optimize.desc': 'Massimizza il ROI e minimizza i costi con strumenti intelligenti.',
+    'cap.secure.desc': 'Proteggi dispositivi e dati con funzionalità di sicurezza di livello enterprise.',
+    'cap.scale.desc': "Fai crescere il tuo deployment IoT dal pilota alla produzione senza cambiare infrastruttura.",
+
+    // ─── Slide 20: Supercharge ─────────────────────────────────────────────────
+    'super.eyebrow': 'Connettiti con Hologram',
+    'super.headline': 'Potenzia le tue',
+    'super.headlineAccent': 'operazioni IoT',
+
+    // ─── Slide 21: Demo ────────────────────────────────────────────────────────
+    'demo.eyebrow': 'Scoprilo in azione',
+    'demo.headline': 'Vivi Hologram',
+    'demo.headlineAccent': 'di persona',
+    'demo.body': 'Esplora la piattaforma Hologram con la nostra demo interattiva. Scopri quanto è facile gestire deployment IoT globali.',
+
+    // ─── Slide 22: Tailored ────────────────────────────────────────────────────
+    'tailored.eyebrow': 'Perché Hologram',
+    'tailored.headlinePersonalized': 'Il partner giusto per',
+    'tailored.headlineDefault': 'Tutto ciò di cui hai bisogno.',
+    'tailored.headlineDefaultAccent': 'Niente di superfluo.',
+    'tailored.body': 'Costruiamo un piano di connettività ottimizzato per il tuo deployment specifico — dalla copertura ai costi al supporto.',
+    'tailored.cta': 'Costruiamo il tuo piano →',
+
+    // ─── Slide 23: Calculator ──────────────────────────────────────────────────
+    'calc.eyebrow': 'Prezzi trasparenti',
+    'calc.headline': 'Calcolatore',
+    'calc.headlineAccent': 'Prezzi',
+
+    // ─── Slide 24: Contact ─────────────────────────────────────────────────────
+    'contact.eyebrow': 'Connettiti con Hologram',
+    'contact.headline': 'Rimani',
+    'contact.headlineAccent': 'connesso',
+    'contact.cta': 'Inizia Ora →',
+}
+
+const sv: typeof en = {
+    // ─── Nav / UI ───────────────────────────────────────────────────────────────
+    'nav.edit': '+ REDIGERA',
+    'nav.toc': 'INNEHÅLL',
+    'nav.skip': 'Hoppa över',
+    'nav.startPresentation': 'Starta presentation',
+
+    // ─── Slide labels (TOC) ────────────────────────────────────────────────────
+    'slide.cover': 'Omslag',
+    'slide.whatIsHologram': 'Vad är Hologram?',
+    'slide.theProblem': 'Problemet',
+    'slide.businessRisk': 'Affärsrisk',
+    'slide.roi': 'Mätbart ROI',
+    'slide.platform': 'Hologram-plattform',
+    'slide.hyperSIMs': 'Hyper SIMs',
+    'slide.outageProtection': 'Avbrottsskydd',
+    'slide.nativeProfiles': 'Inbyggda profiler',
+    'slide.softwareAPI': 'Mjukvara & API',
+    'slide.support': 'Expertsupport',
+    'slide.security': 'Säkerhet',
+    'slide.globalCoverage': 'Global täckning',
+    'slide.customers': 'Kunder',
+    'slide.verkada': 'Verkada',
+    'slide.farmersFridge': "Farmer's Fridge",
+    'slide.sundayPower': 'Sunday Power',
+    'slide.capabilities1': 'Skydda/Driftsätt/Hantera',
+    'slide.capabilities2': 'Optimera/Säkra/Skala',
+    'slide.supercharge': 'Superladda IoT',
+    'slide.demo': 'Produktdemo',
+    'slide.tailored': 'Skräddarsydd plan',
+    'slide.calculator': 'Priskalkylator',
+    'slide.contact': 'Håll kontakten',
+
+    // ─── Personalization modal ─────────────────────────────────────────────────
+    'modal.title': 'Personalisera denna presentation',
+    'modal.companyName': 'Företagsnamn',
+    'modal.companyPlaceholder': 'Prospektets företagsnamn',
+    'modal.aeName': 'Ditt namn (AE)',
+    'modal.aeNamePlaceholder': 'Account Executive-namn',
+    'modal.aeEmail': 'Din e-post',
+    'modal.aeEmailPlaceholder': 'din.epost@hologram.io',
+    'modal.aePhone': 'Din telefon',
+    'modal.aePhonePlaceholder': '+1 (555) 123-4567',
+
+    // ─── Slide 1: Cover ────────────────────────────────────────────────────────
+    'cover.outage': 'Avbrotts',
+    'cover.proof': 'Säker',
+    'cover.line2': 'Mobil Anslutning',
+    'cover.line3': 'Som Bara Fungerar.',
+    'cover.subtitle': 'Den enda IoT-anslutningsplattformen som stoppar avbrott innan de inträffar',
+    'cover.preparedFor': 'Förberett exklusivt för',
+
+    // ─── Slide 2: What is Hologram? ────────────────────────────────────────────
+    'what.eyebrow': 'Vad är Hologram?',
+    'what.headline': 'Avbrottssäker mobil anslutning',
+    'what.headlineAccent': 'för IoT',
+    'what.body': 'Den enda heltäckande IoT-anslutningsplattformen som stoppar avbrott innan de börjar — så att du kan driftsätta, hantera och skala enheter globalt med pålitlighet som skyddar din verksamhet.',
+    'what.pillar.hyperSIMs': 'Hyper SIMs',
+    'what.pillar.hyperSIMs.detail': 'Multi-core eUICC SIM-kort med profilbyte på begäran och inbyggd reservteknik.',
+    'what.pillar.globalCoverage': 'Global täckning',
+    'what.pillar.globalCoverage.detail': 'Multi-operatör redundans i 190+ länder, håller enheter uppkopplade överallt.',
+    'what.pillar.outageProtection': 'Avbrottsskydd',
+    'what.pillar.outageProtection.detail': 'Patenterad reservteknik med separata hårdvarukärnor som byter omedelbart vid fel.',
+    'what.pillar.dashboardAPI': 'Instrumentpanel & API',
+    'what.pillar.dashboardAPI.detail': 'Fullständig flottehantering med realtidsövervakning, användningsanalys och ett kraftfullt REST API.',
+    'what.stat.customers': 'Kunder',
+    'what.stat.countries': 'Länder',
+    'what.stat.carriers': 'Operatörer',
+    'what.stat.uptime': 'Drifttid',
+
+    // ─── Slide 3: The Problem ──────────────────────────────────────────────────
+    'problem1.eyebrow': 'Problemet med de flesta anslutningstjänster',
+    'problem1.headline': 'De flesta anslutningstjänster är en belastning, inte en tillgång.',
+    'problem1.card1.title': 'Opålitlig anslutning',
+    'problem1.card1.items': 'Frekventa avbrott|Ojämn täckning|Låg genomströmning|Hög latens|Beroende av en enda operatör',
+    'problem1.card2.title': 'Komplicerade arbetsflöden',
+    'problem1.card2.items': 'Flera operatörsrelationer|Långsamma manuella processer|Felsökning på flera plattformar|Regionala efterlevnadskrav|Fragmenterad rapportering och fakturering',
+    'problem1.card3.title': 'Frustrerande mjukvara',
+    'problem1.card3.items': 'Ingen insyn i enhetshälsa|Begränsat eller obefintligt API|Ingen tydlig rotorsaksanalys|Klumpiga gränssnitt|Kan inte integreras med befintliga system',
+
+    // ─── Slide 4: Business Risk ────────────────────────────────────────────────
+    'problem2.eyebrow': 'Problemet med de flesta anslutningstjänster',
+    'problem2.headline': 'Skyddar din leverantör din intäkt, eller riskerar den den?',
+    'problem2.risk1': 'Varje minuts driftstopp innebär förlorade transaktioner, saknad data och missnöjda kunder.',
+    'problem2.risk2': 'Långsam marknadsintroduktion fördröjer intäkterna när enheter väntar i lager istället för att generera värde.',
+    'problem2.risk3': 'Ineffektiv verksamhet dränerar resurser som kunde investeras i tillväxt.',
+    'problem2.risk4': 'Kundavhopp ökar när anslutningsproblem urholkar förtroendet för din produkt.',
+
+    // ─── Slide 5: ROI ──────────────────────────────────────────────────────────
+    'roi.eyebrow': 'Hur skiljer sig Hologram?',
+    'roi.headline': 'Vem som helst kan sälja dig ett SIM-kort. Hologram levererar mätbart ROI.',
+    'roi.body': 'Från 50% lägre anslutningskostnader till garanterad drifttid som skyddar intäktsströmmar...',
+    'roi.stat1.label': 'GENOMSNITTLIG MINSKNING AV ANSLUTNINGSKOSTNADER',
+    'roi.stat2.label': 'HISTORISK DRIFTTID, 99.95% GARANTERAT AV SLA',
+    'roi.stat3.label': 'DATA ÖVERFÖRD DAGLIGEN',
+    'roi.stat4.label': 'FÖRETAG LITAR PÅ HOLOGRAM',
+    'roi.quote1': 'ROI med Hologram har varit exceptionellt. Vi kunde halvera våra IoT-fakturor.',
+    'roi.quote2': 'Flexibiliteten som Hologram erbjuder hjälpte oss undvika driftstopp trots avbrott hos AT&T och Verizon.',
+
+    // ─── Slide 6: Platform ─────────────────────────────────────────────────────
+    'platform.eyebrow': 'Hologram-plattform',
+    'platform.headline': 'Driftsätt snabbare. Skala smartare. Anslut överallt.',
+    'platform.subtitle': 'Den enda anslutningsplattformen som stoppar avbrott innan de inträffar, så att du kan fokusera på att bygga och inte felsöka.',
+    'platform.feat1.title': 'Ett SIM — 190+ länder, 550+ operatörer',
+    'platform.feat1.detail': 'Ett SIM som fungerar överallt. Slipp jonglera med flera operatörsrelationer.',
+    'platform.feat2.title': 'Avbrottsskydd — 99.95% drifttid garanterad',
+    'platform.feat2.detail': 'Multi-core SIM med automatisk reservteknik. Dina enheter förblir online.',
+    'platform.feat3.title': 'Utvecklar-API — REST API älskat av devs',
+    'platform.feat3.detail': 'Integrera sömlöst med dina befintliga system via vårt fullt dokumenterade REST API.',
+    'platform.simLabel': 'Hyper SIM-kort',
+    'platform.simDetail': 'Multi-profil eUICC med intelligent orkestrering',
+
+    // ─── Slide 7: Hyper SIMs ───────────────────────────────────────────────────
+    'hyper.eyebrow': 'Hologram-funktioner',
+    'hyper.headline': 'Hyper SIMs',
+    'hyper.subtitle': 'Multi-core eUICC-anslutning, omgjord',
+    'hyper.feat1.title': 'Global täckning',
+    'hyper.feat1.detail': 'Tillgång till 550+ operatörer i 190+ länder. Hyper SIMs ansluter automatiskt till starkaste signalen.',
+    'hyper.feat2.title': 'Anpassningsbar anslutning',
+    'hyper.feat2.detail': 'Byt profil automatiskt eller på begäran för att optimera kostnad, prestanda och täckning.',
+    'hyper.feat3.title': 'Framtidsredo',
+    'hyper.feat3.detail': 'Skicka uppdateringar OTA under hela enhetens livscykel. Inget mer SIM-byte.',
+    'hyper.feat4.title': 'Blixtsnabb prestanda',
+    'hyper.feat4.detail': 'Latens ner till 50ms för nästan omedelbar dataöverföring och sömlös drift.',
+
+    // ─── Slide 8: Outage Protection ────────────────────────────────────────────
+    'outage.eyebrow': 'Hologram-funktioner',
+    'outage.headline': 'Avbrottsskydd',
+    'outage.subtitle': 'Håll affärskritiska enheter online',
+    'outage.feat1.title': 'Multi-core SIM med reservteknik',
+    'outage.feat1.detail': 'Hologram Hyper SIMs innehåller flera kärnor — en primär kärna som ansluter till din föredragna operatörsnätverk och en reservkärna som aktiveras automatiskt om den primära drabbas av avbrott. Reservtekniken övervakar signalstyrkan i realtid och byter sömlöst, utan manuell åtgärd.',
+    'outage.feat2.title': 'Branschens enda drifttidsgaranti',
+    'outage.feat2.detail': '99.95% drifttid, kontraktuellt garanterat. Historisk drifttid är 99.99%. Ingen annan anslutningstjänst sätter detta på papper.',
+    'outage.callout': '99.99% Historisk drifttid',
+    'outage.callout.sub': '99.95% Garanterat av SLA',
+    'outage.roaming': 'Roaming',
+    'outage.roaming.detail': 'Delar samma fysiska kärna. Om operatören fallerar, förlorar du anslutningen.',
+    'outage.fallback': 'Reserv',
+    'outage.fallback.detail': 'Separata hårdvarukärnor. Primärt avbrott utlöser omedelbar byte till reserv.',
+    'outage.step1': 'Primärt nätverk aktivt',
+    'outage.step1.status': 'ÖVERVAKAR',
+    'outage.step2': 'Reserv aktiverad omedelbart',
+    'outage.step2.status': 'BYTER',
+
+    // ─── Slide 9: Native Profiles ──────────────────────────────────────────────
+    'native.eyebrow': 'Hologram-funktioner',
+    'native.headline': 'Inbyggda operatörsprofiler',
+    'native.subtitle': 'Direktåtkomst till operatör, inte generisk roaming',
+
+    // ─── Slide 10: Software & API ──────────────────────────────────────────────
+    'software.eyebrow': 'Hologram-funktioner',
+    'software.headline': 'Kraftfull mjukvara & API',
+    'software.subtitle': 'Fullständig flottevisning och kontroll',
+    'software.feat1.title': 'Handlingsbara realtidsdata',
+    'software.feat1.detail': 'Visualisera varje aspekt av din flottas anslutning. Heltäckande analys hjälper dig att identifiera problematiska enheter.',
+    'software.feat2.title': 'Enkel enhetshantering',
+    'software.feat2.detail': 'Spåra, felsök och vidta åtgärder för en eller alla dina enheter. Pausa dataanvändning och sätt datagränser.',
+    'software.feat3.title': 'API älskat av utvecklare',
+    'software.feat3.detail': 'Anslut enkelt och säkert dina data till befintliga applikationer via vårt REST API.',
+    'software.feat4.title': 'Sömlös aktivering',
+    'software.feat4.detail': 'Bara några klick och dina enheter är live — oavsett om det är en eller hundratusen.',
+
+    // ─── Slide 11: Support ─────────────────────────────────────────────────────
+    'support.eyebrow': 'Hologram-funktioner',
+    'support.headline': 'Support från riktiga experter',
+    'support.subtitle': 'Praktisk support från ingenjörer som löser anslutningsproblem, inte personer som vidarebefordrar ärenden.',
+    'support.feat1.title': 'Dedikerade lösningsingenjörer',
+    'support.feat1.detail': 'Tala direkt med ingenjörer, inte supportrepresentanter som läser från manus.',
+    'support.feat2.title': 'Snabb och pålitlig respons',
+    'support.feat2.detail': 'Vi erbjuder 24/7 kundsupport med garanterade SLA:er.',
+    'support.feat3.title': 'Djup anslutningstexpertis',
+    'support.feat3.detail': 'Våra ingenjörer har sammanlagda decennier av erfarenhet inom mobilnät, enhetshårdvara, firmware och IoT-protokoll.',
+    'support.review1': 'Bytte till Hologram och har aldrig sett oss om — felfri prestanda',
+    'support.review2': 'Enastående samarbete med Hologram',
+    'support.review3': 'Hologram support-teamet är professionellt och kunnigt',
+    'support.review4': 'Mycket lätt att arbeta med och superförlitligt',
+    'support.g2': 'G2-recension',
+    'support.online': 'Online',
+
+    // ─── Slide 12: Security ────────────────────────────────────────────────────
+    'security.eyebrow': 'Hologram-funktioner',
+    'security.headline': 'Säkerhet i Enterpriseklass',
+    'security.subtitle': 'Skydda din flotta och dina data',
+
+    // ─── Slide 13: Globe ───────────────────────────────────────────────────────
+    'globe.eyebrow': 'Hologram-nätverk',
+    'globe.headline': 'Global täckning',
+    'globe.headlineAccent': 'Karta',
+
+    // ─── Slide 14: Customers ───────────────────────────────────────────────────
+    'customers.eyebrow': 'Betrodd av branschledare',
+    'customers.headline': 'Driver anslutning för',
+    'customers.headlineAccent': '6 000+ företag',
+
+    // ─── Slides 15–17: Case studies ────────────────────────────────────────────
+    'case.eyebrow': 'Kundsuccéer',
+    'case.challenge': 'Utmaning',
+    'case.solution': 'Lösning',
+
+    // ─── Slides 18–19: Capabilities ────────────────────────────────────────────
+    'cap.eyebrow': 'Hur skiljer sig Hologram?',
+    'cap.headline': 'Hologram är designat för behovet hos',
+    'cap.headlineAccent': 'modern IoT',
+    'cap.headlineSuffix': 'enheter och team.',
+    'cap.protect': 'Skydda',
+    'cap.deploy': 'Driftsätt',
+    'cap.manage': 'Hantera',
+    'cap.optimize': 'Optimera',
+    'cap.secure': 'Säkra',
+    'cap.scale': 'Skala',
+    'cap.protect.desc': 'Förebygg avbrott innan de påverkar ditt resultat med multi-core-teknik.',
+    'cap.deploy.desc': 'Lansera IoT-enheter var som helst med en enda SIM-lösning som fungerar i 190+ länder.',
+    'cap.manage.desc': 'Kontrollera din verksamhet via mjukvara i enterpriseklass med realtidsöversyn.',
+    'cap.optimize.desc': 'Maximera ROI och minimera kostnader med intelligenta verktyg.',
+    'cap.secure.desc': 'Skydda dina enheter och data med säkerhetsfunktioner i enterpriseklass.',
+    'cap.scale.desc': 'Väx din IoT-driftsättning från pilot till produktion utan att byta infrastruktur.',
+
+    // ─── Slide 20: Supercharge ─────────────────────────────────────────────────
+    'super.eyebrow': 'Anslut med Hologram',
+    'super.headline': 'Superladda dina',
+    'super.headlineAccent': 'IoT-operationer',
+
+    // ─── Slide 21: Demo ────────────────────────────────────────────────────────
+    'demo.eyebrow': 'Se det i handling',
+    'demo.headline': 'Upplev Hologram',
+    'demo.headlineAccent': 'på nära håll',
+    'demo.body': 'Utforska Hologram-plattformen med vår interaktiva demo. Se hur enkelt det är att hantera globala IoT-driftsättningar.',
+
+    // ─── Slide 22: Tailored ────────────────────────────────────────────────────
+    'tailored.eyebrow': 'Varför Hologram',
+    'tailored.headlinePersonalized': 'Den rätta partnern för',
+    'tailored.headlineDefault': 'Allt du behöver.',
+    'tailored.headlineDefaultAccent': 'Inget du inte behöver.',
+    'tailored.body': 'Vi bygger en anslutningsplan optimerad för din specifika driftsättning — från täckning till kostnad till support.',
+    'tailored.cta': 'Låt oss bygga din plan →',
+
+    // ─── Slide 23: Calculator ──────────────────────────────────────────────────
+    'calc.eyebrow': 'Transparent prissättning',
+    'calc.headline': 'Pris',
+    'calc.headlineAccent': 'Kalkylator',
+
+    // ─── Slide 24: Contact ─────────────────────────────────────────────────────
+    'contact.eyebrow': 'Anslut med Hologram',
+    'contact.headline': 'Håll dig',
+    'contact.headlineAccent': 'uppkopplad',
+    'contact.cta': 'Kom igång →',
+}
+
+const de: typeof en = {
+    // ─── Nav / UI ───────────────────────────────────────────────────────────────
+    'nav.edit': '+ BEARBEITEN',
+    'nav.toc': 'INHALTSVERZEICHNIS',
+    'nav.skip': 'Überspringen',
+    'nav.startPresentation': 'Präsentation starten',
+
+    // ─── Slide labels (TOC) ────────────────────────────────────────────────────
+    'slide.cover': 'Titelfolie',
+    'slide.whatIsHologram': 'Was ist Hologram?',
+    'slide.theProblem': 'Das Problem',
+    'slide.businessRisk': 'Geschäftsrisiko',
+    'slide.roi': 'Messbarer ROI',
+    'slide.platform': 'Hologram-Plattform',
+    'slide.hyperSIMs': 'Hyper SIMs',
+    'slide.outageProtection': 'Ausfallschutz',
+    'slide.nativeProfiles': 'Native Profile',
+    'slide.softwareAPI': 'Software & API',
+    'slide.support': 'Experten-Support',
+    'slide.security': 'Sicherheit',
+    'slide.globalCoverage': 'Globale Abdeckung',
+    'slide.customers': 'Kunden',
+    'slide.verkada': 'Verkada',
+    'slide.farmersFridge': "Farmer's Fridge",
+    'slide.sundayPower': 'Sunday Power',
+    'slide.capabilities1': 'Schützen/Einsetzen/Verwalten',
+    'slide.capabilities2': 'Optimieren/Sichern/Skalieren',
+    'slide.supercharge': 'IoT Antrieb',
+    'slide.demo': 'Produkt-Demo',
+    'slide.tailored': 'Maßgeschneiderter Plan',
+    'slide.calculator': 'Preisrechner',
+    'slide.contact': 'In Verbindung bleiben',
+
+    // ─── Personalization modal ─────────────────────────────────────────────────
+    'modal.title': 'Diese Präsentation personalisieren',
+    'modal.companyName': 'Unternehmensname',
+    'modal.companyPlaceholder': 'Name des Interessenten-Unternehmens',
+    'modal.aeName': 'Ihr Name (AE)',
+    'modal.aeNamePlaceholder': 'Account Executive Name',
+    'modal.aeEmail': 'Ihre E-Mail',
+    'modal.aeEmailPlaceholder': 'ihre.email@hologram.io',
+    'modal.aePhone': 'Ihr Telefon',
+    'modal.aePhonePlaceholder': '+1 (555) 123-4567',
+
+    // ─── Slide 1: Cover ────────────────────────────────────────────────────────
+    'cover.outage': 'Ausfall',
+    'cover.proof': 'Sicher',
+    'cover.line2': 'Mobilfunk-Konnektivität',
+    'cover.line3': 'Die einfach funktioniert.',
+    'cover.subtitle': 'Die einzige IoT-Konnektivitätsplattform, die Ausfälle verhindert, bevor sie passieren',
+    'cover.preparedFor': 'Exklusiv vorbereitet für',
+
+    // ─── Slide 2: What is Hologram? ────────────────────────────────────────────
+    'what.eyebrow': 'Was ist Hologram?',
+    'what.headline': 'Ausfallsichere Mobilfunk-Konnektivität',
+    'what.headlineAccent': 'für IoT',
+    'what.body': 'Die einzige End-to-End IoT-Konnektivitätsplattform, die Ausfälle verhindert, bevor sie beginnen — damit Sie Geräte weltweit mit einer Zuverlässigkeit einsetzen, verwalten und skalieren können, die Ihr Geschäftsergebnis schützt.',
+    'what.pillar.hyperSIMs': 'Hyper SIMs',
+    'what.pillar.hyperSIMs.detail': 'Multi-Core eUICC SIMs mit On-Demand-Profilwechsel und integrierter Fallback-Technologie.',
+    'what.pillar.globalCoverage': 'Globale Abdeckung',
+    'what.pillar.globalCoverage.detail': 'Multi-Carrier-Redundanz in 190+ Ländern, hält Geräte überall verbunden.',
+    'what.pillar.outageProtection': 'Ausfallschutz',
+    'what.pillar.outageProtection.detail': 'Patentierte Fallback-Technologie mit separaten Hardware-Kernen, die bei Ausfall sofort umschalten.',
+    'what.pillar.dashboardAPI': 'Dashboard & API',
+    'what.pillar.dashboardAPI.detail': 'Vollständiges Flottenmanagement mit Echtzeit-Monitoring, Nutzungsanalysen und einer leistungsstarken REST API.',
+    'what.stat.customers': 'Kunden',
+    'what.stat.countries': 'Länder',
+    'what.stat.carriers': 'Netzbetreiber',
+    'what.stat.uptime': 'Verfügbarkeit',
+
+    // ─── Slide 3: The Problem ──────────────────────────────────────────────────
+    'problem1.eyebrow': 'Das Problem mit den meisten Konnektivitätsanbietern',
+    'problem1.headline': 'Die meisten Konnektivitätsanbieter sind eine Haftung, kein Vorteil.',
+    'problem1.card1.title': 'Unzuverlässige Konnektivität',
+    'problem1.card1.items': 'Häufige Ausfälle|Lückenhafte Abdeckung|Geringe Durchsatzrate|Hohe Latenz|Abhängigkeit von einem einzelnen Carrier',
+    'problem1.card2.title': 'Komplizierte Arbeitsabläufe',
+    'problem1.card2.items': 'Mehrere Carrier-Beziehungen|Langsame manuelle Prozesse|Fehlersuche über mehrere Plattformen|Regionale Compliance-Anforderungen|Fragmentierte Berichte und Abrechnung',
+    'problem1.card3.title': 'Frustrierende Software',
+    'problem1.card3.items': 'Keine Transparenz beim Gerätezustand|Begrenzte oder keine APIs|Keine klare Ursachenanalyse|Unübersichtliche Oberflächen|Keine Integration mit bestehenden Systemen',
+
+    // ─── Slide 4: Business Risk ────────────────────────────────────────────────
+    'problem2.eyebrow': 'Das Problem mit den meisten Konnektivitätsanbietern',
+    'problem2.headline': 'Schützt Ihr Anbieter Ihren Umsatz oder gefährdet er ihn?',
+    'problem2.risk1': 'Jede Minute Ausfallzeit bedeutet verlorene Transaktionen, fehlende Daten und unzufriedene Kunden.',
+    'problem2.risk2': 'Langsame Markteinführung verzögert Einnahmen, während Geräte in Lagern warten statt Wert zu generieren.',
+    'problem2.risk3': 'Ineffizienter Betrieb beansprucht Ressourcen, die in Wachstum investiert werden könnten.',
+    'problem2.risk4': 'Die Kundenabwanderung steigt, wenn Konnektivitätsprobleme das Vertrauen in Ihr Produkt untergraben.',
+
+    // ─── Slide 5: ROI ──────────────────────────────────────────────────────────
+    'roi.eyebrow': 'Was macht Hologram anders?',
+    'roi.headline': 'Jeder kann Ihnen eine SIM-Karte verkaufen. Hologram liefert messbaren ROI.',
+    'roi.body': 'Von 50% Reduzierung der Konnektivitätskosten bis zu garantierter Verfügbarkeit, die Einnahmequellen schützt...',
+    'roi.stat1.label': 'DURCHSCHNITTLICHE REDUZIERUNG DER KONNEKTIVITÄTSKOSTEN',
+    'roi.stat2.label': 'HISTORISCHE VERFÜGBARKEIT, 99,95% SLA-GARANTIERT',
+    'roi.stat3.label': 'TÄGLICH ÜBERTRAGENE DATEN',
+    'roi.stat4.label': 'UNTERNEHMEN VERTRAUEN HOLOGRAM',
+    'roi.quote1': 'Der ROI mit Hologram war außergewöhnlich. Wir konnten unsere IoT-Rechnungen halbieren.',
+    'roi.quote2': 'Die Flexibilität von Hologram half uns, Ausfallzeiten trotz AT&T- und Verizon-Störungen zu vermeiden.',
+
+    // ─── Slide 6: Platform ─────────────────────────────────────────────────────
+    'platform.eyebrow': 'Hologram-Plattform',
+    'platform.headline': 'Schneller einsetzen. Intelligenter skalieren. Überall verbinden.',
+    'platform.subtitle': 'Die einzige Konnektivitätsplattform, die Ausfälle verhindert, bevor sie passieren, damit Sie sich aufs Bauen konzentrieren können statt auf Fehlersuche.',
+    'platform.feat1.title': 'Eine SIM — 190+ Länder, 550+ Netzbetreiber',
+    'platform.feat1.detail': 'Eine SIM, die überall funktioniert. Kein Jonglieren mit mehreren Carrier-Beziehungen.',
+    'platform.feat2.title': 'Ausfallschutz — 99,95% Verfügbarkeit garantiert',
+    'platform.feat2.detail': 'Multi-Core SIMs mit automatischer Fallback-Technologie. Ihre Geräte bleiben online.',
+    'platform.feat3.title': 'Entwickler-API — Von Devs geliebte REST API',
+    'platform.feat3.detail': 'Integrieren Sie nahtlos mit Ihren bestehenden Systemen über unsere vollständig dokumentierte REST API.',
+    'platform.simLabel': 'Hyper SIM-Karte',
+    'platform.simDetail': 'Multi-Profil eUICC mit intelligenter Orchestrierung',
+
+    // ─── Slide 7: Hyper SIMs ───────────────────────────────────────────────────
+    'hyper.eyebrow': 'Hologram-Funktionen',
+    'hyper.headline': 'Hyper SIMs',
+    'hyper.subtitle': 'Multi-Core eUICC-Konnektivität, neu gedacht',
+    'hyper.feat1.title': 'Globale Abdeckung',
+    'hyper.feat1.detail': 'Zugang zu 550+ Netzbetreibern in 190+ Ländern. Hyper SIMs verbinden sich automatisch mit dem stärksten Signal.',
+    'hyper.feat2.title': 'Anpassbare Konnektivität',
+    'hyper.feat2.detail': 'Profile automatisch oder auf Abruf wechseln, um Kosten, Leistung und Abdeckung zu optimieren.',
+    'hyper.feat3.title': 'Zukunftssicher',
+    'hyper.feat3.detail': 'Updates OTA während des gesamten Gerätelebenszyklus einspielen. Kein SIM-Wechsel mehr.',
+    'hyper.feat4.title': 'Blitzschnelle Leistung',
+    'hyper.feat4.detail': 'Latenz bis zu 50ms für nahezu sofortige Datenübertragung und reibungslosen Betrieb.',
+
+    // ─── Slide 8: Outage Protection ────────────────────────────────────────────
+    'outage.eyebrow': 'Hologram-Funktionen',
+    'outage.headline': 'Ausfallschutz',
+    'outage.subtitle': 'Geschäftskritische Geräte online halten',
+    'outage.feat1.title': 'Multi-Core SIMs mit Fallback-Technologie',
+    'outage.feat1.detail': 'Hologram Hyper SIMs enthalten mehrere Kerne — einen primären Kern, der sich mit Ihrem bevorzugten Carrier-Netzwerk verbindet, und einen Backup-Kern, der sich automatisch aktiviert, wenn der primäre einen Ausfall erlebt. Die Fallback-Technologie überwacht die Signalqualität in Echtzeit und wechselt nahtlos, ohne manuellen Eingriff.',
+    'outage.feat2.title': 'Die einzige Verfügbarkeitsgarantie der Branche',
+    'outage.feat2.detail': '99,95% Verfügbarkeit, vertraglich garantiert. Die historische Verfügbarkeit beträgt 99,99%. Kein anderer Konnektivitätsanbieter schreibt das schriftlich fest.',
+    'outage.callout': '99,99% Historische Verfügbarkeit',
+    'outage.callout.sub': '99,95% SLA-Garantiert',
+    'outage.roaming': 'Roaming',
+    'outage.roaming.detail': 'Teilt denselben physischen Kern. Wenn der Carrier ausfällt, sind Sie offline.',
+    'outage.fallback': 'Fallback',
+    'outage.fallback.detail': 'Separate Hardware-Kerne. Ein primärer Ausfall löst sofortigen Wechsel zum Backup aus.',
+    'outage.step1': 'Primärnetzwerk aktiv',
+    'outage.step1.status': 'ÜBERWACHT',
+    'outage.step2': 'Fallback sofort aktiviert',
+    'outage.step2.status': 'WECHSELT',
+
+    // ─── Slide 9: Native Profiles ──────────────────────────────────────────────
+    'native.eyebrow': 'Hologram-Funktionen',
+    'native.headline': 'Native Carrier-Profile',
+    'native.subtitle': 'Direkter Carrier-Zugang, kein generisches Roaming',
+
+    // ─── Slide 10: Software & API ──────────────────────────────────────────────
+    'software.eyebrow': 'Hologram-Funktionen',
+    'software.headline': 'Leistungsstarke Software & API',
+    'software.subtitle': 'Vollständige Flottensicht und -kontrolle',
+    'software.feat1.title': 'Handlungsrelevante Echtzeit-Informationen',
+    'software.feat1.detail': 'Visualisieren Sie jeden Aspekt der Konnektivität Ihrer Flotte. Umfassende Analysen helfen Ihnen, problematische Geräte zu identifizieren.',
+    'software.feat2.title': 'Einfaches Gerätemanagement',
+    'software.feat2.detail': 'Verfolgen, beheben und handeln Sie bei einem oder allen Ihren Geräten. Datennutzung pausieren und Datenlimits setzen.',
+    'software.feat3.title': 'Von Entwicklern geliebte API',
+    'software.feat3.detail': 'Verbinden Sie Ihre Daten einfach und sicher mit bestehenden Anwendungen über unsere REST API.',
+    'software.feat4.title': 'Nahtlose Aktivierung',
+    'software.feat4.detail': 'Nur wenige Klicks und Ihre Geräte sind live — ob eines oder hunderttausend.',
+
+    // ─── Slide 11: Support ─────────────────────────────────────────────────────
+    'support.eyebrow': 'Hologram-Funktionen',
+    'support.headline': 'Support von echten Experten',
+    'support.subtitle': 'Praxisnaher Support von Ingenieuren, die Konnektivitätsprobleme lösen, nicht von Personen, die Tickets weiterleiten.',
+    'support.feat1.title': 'Dedizierte Solutions Engineers',
+    'support.feat1.detail': 'Sprechen Sie direkt mit Ingenieuren, nicht mit Support-Mitarbeitern, die von Skripten lesen.',
+    'support.feat2.title': 'Schnelle, zuverlässige Reaktion',
+    'support.feat2.detail': 'Wir bieten 24/7 Kundensupport mit garantierten SLAs.',
+    'support.feat3.title': 'Tiefgehende Konnektivitäts-Expertise',
+    'support.feat3.detail': 'Unsere Ingenieure verfügen über jahrzehntelange kombinierte Erfahrung in Mobilfunknetzen, Gerätehardware, Firmware und IoT-Protokollen.',
+    'support.review1': 'Zu Hologram gewechselt und nie zurückgeschaut – makellose Leistung',
+    'support.review2': 'Außergewöhnliche Zusammenarbeit mit Hologram',
+    'support.review3': 'Das Hologram Support-Team ist professionell und kompetent',
+    'support.review4': 'Sehr einfach zu arbeiten und absolut zuverlässig',
+    'support.g2': 'G2-Bewertung',
+    'support.online': 'Online',
+
+    // ─── Slide 12: Security ────────────────────────────────────────────────────
+    'security.eyebrow': 'Hologram-Funktionen',
+    'security.headline': 'Unternehmenssicherheit auf höchstem Niveau',
+    'security.subtitle': 'Schützen Sie Ihre Flotte und Ihre Daten',
+
+    // ─── Slide 13: Globe ───────────────────────────────────────────────────────
+    'globe.eyebrow': 'Hologram-Netzwerk',
+    'globe.headline': 'Globale Abdeckung',
+    'globe.headlineAccent': 'Karte',
+
+    // ─── Slide 14: Customers ───────────────────────────────────────────────────
+    'customers.eyebrow': 'Von Branchenführern vertraut',
+    'customers.headline': 'Konnektivität für',
+    'customers.headlineAccent': '6.000+ Unternehmen',
+
+    // ─── Slides 15–17: Case studies ────────────────────────────────────────────
+    'case.eyebrow': 'Kundenerfolge',
+    'case.challenge': 'Herausforderung',
+    'case.solution': 'Lösung',
+
+    // ─── Slides 18–19: Capabilities ────────────────────────────────────────────
+    'cap.eyebrow': 'Was macht Hologram anders?',
+    'cap.headline': 'Hologram ist für die Anforderungen von',
+    'cap.headlineAccent': 'modernem IoT',
+    'cap.headlineSuffix': 'Geräten und Teams entwickelt.',
+    'cap.protect': 'Schützen',
+    'cap.deploy': 'Einsetzen',
+    'cap.manage': 'Verwalten',
+    'cap.optimize': 'Optimieren',
+    'cap.secure': 'Sichern',
+    'cap.scale': 'Skalieren',
+    'cap.protect.desc': 'Ausfälle verhindern, bevor sie Ihr Ergebnis beeinflussen, mit Multi-Core-Technologie.',
+    'cap.deploy.desc': 'IoT-Geräte überall einsetzen mit einer einzigen SIM-Lösung, die in 190+ Ländern funktioniert.',
+    'cap.manage.desc': 'Betrieb über Enterprise-Software mit Echtzeit-Transparenz steuern.',
+    'cap.optimize.desc': 'ROI maximieren und Kosten mit intelligenten Tools minimieren.',
+    'cap.secure.desc': 'Geräte und Daten mit Enterprise-Sicherheitsfunktionen schützen.',
+    'cap.scale.desc': 'IoT-Einsatz vom Piloten bis zur Produktion skalieren ohne Infrastrukturwechsel.',
+
+    // ─── Slide 20: Supercharge ─────────────────────────────────────────────────
+    'super.eyebrow': 'Mit Hologram verbinden',
+    'super.headline': 'Laden Sie Ihre',
+    'super.headlineAccent': 'IoT-Operationen auf',
+
+    // ─── Slide 21: Demo ────────────────────────────────────────────────────────
+    'demo.eyebrow': 'Sehen Sie es in Aktion',
+    'demo.headline': 'Erleben Sie Hologram',
+    'demo.headlineAccent': 'aus erster Hand',
+    'demo.body': 'Entdecken Sie die Hologram-Plattform mit unserer interaktiven Demo. Sehen Sie, wie einfach globale IoT-Einsätze verwaltet werden können.',
+
+    // ─── Slide 22: Tailored ────────────────────────────────────────────────────
+    'tailored.eyebrow': 'Warum Hologram',
+    'tailored.headlinePersonalized': 'Der richtige Partner für',
+    'tailored.headlineDefault': 'Alles, was Sie brauchen.',
+    'tailored.headlineDefaultAccent': 'Nichts, was Sie nicht brauchen.',
+    'tailored.body': 'Wir erstellen einen Konnektivitätsplan, der für Ihren spezifischen Einsatz optimiert ist — von Abdeckung über Kosten bis Support.',
+    'tailored.cta': 'Lassen Sie uns Ihren Plan erstellen →',
+
+    // ─── Slide 23: Calculator ──────────────────────────────────────────────────
+    'calc.eyebrow': 'Transparente Preisgestaltung',
+    'calc.headline': 'Preis',
+    'calc.headlineAccent': 'Rechner',
+
+    // ─── Slide 24: Contact ─────────────────────────────────────────────────────
+    'contact.eyebrow': 'Mit Hologram verbinden',
+    'contact.headline': 'Verbunden',
+    'contact.headlineAccent': 'bleiben',
+    'contact.cta': 'Jetzt starten →',
+}
+
+export const translations: Record<Language, typeof en> = { en, es, it, sv, de }

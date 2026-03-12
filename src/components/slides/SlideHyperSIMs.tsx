@@ -116,6 +116,8 @@ export default function SlideHyperSIMs(_: SlideProps) {
           justifyContent: 'center',
           paddingLeft: 80,
           paddingRight: 48,
+          paddingTop: 64,
+          paddingBottom: 64,
           zIndex: 5,
         }}
       >

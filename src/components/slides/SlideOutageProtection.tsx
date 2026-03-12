@@ -19,7 +19,7 @@ const itemVariants: Variants = {
 }
 
 
-const STEP_DURATION = 5000
+const STEP_DURATION = 4000
 
 export default function SlideOutageProtection(_: SlideProps) {
   const { t } = useLanguage()
@@ -85,9 +85,9 @@ export default function SlideOutageProtection(_: SlideProps) {
 
       {/* Right side: sequential animated images */}
       <motion.div
-        initial={{ opacity: 0, x: 40 }}
+        initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+        transition={{ duration: 0.55, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
         style={{
           position: 'absolute',
           right: '4%',
@@ -119,9 +119,9 @@ export default function SlideOutageProtection(_: SlideProps) {
         {/* Status badge */}
         <motion.div
           key={`status-${activeStep}`}
-          initial={{ opacity: 0, y: -6 }}
+          initial={{ opacity: 0, y: -4 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.35 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
           style={{
             position: 'relative',
             zIndex: 4,
@@ -138,8 +138,8 @@ export default function SlideOutageProtection(_: SlideProps) {
         >
           {/* Pulsing dot */}
           <motion.div
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 1.2, repeat: Infinity, ease: 'easeInOut' }}
+            animate={{ opacity: [1, 0.35, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
             style={{
               width: 7,
               height: 7,
@@ -178,10 +178,10 @@ export default function SlideOutageProtection(_: SlideProps) {
               key={activeStep}
               src={step.src}
               alt=""
-              initial={{ opacity: 0, y: 18, scale: 0.97 }}
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -18, scale: 0.97 }}
-              transition={{ duration: 0.9, ease: 'easeInOut' }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
               style={{
                 width: '100%',
                 objectFit: 'contain',
@@ -199,7 +199,7 @@ export default function SlideOutageProtection(_: SlideProps) {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
               style={{
                 marginTop: 14,
                 fontSize: 12,

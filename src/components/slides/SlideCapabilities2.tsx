@@ -83,7 +83,7 @@ const columns = [
   },
 ]
 
-export default function SlideCapabilities2({ personalization, onNext, onPrev }: SlideProps) {
+export default function SlideCapabilities2(_: SlideProps) {
   const { t } = useLanguage()
   return (
     <div className="slide-base" style={{ background: '#00040f' }}>
@@ -206,7 +206,7 @@ export default function SlideCapabilities2({ personalization, onNext, onPrev }: 
                       borderBottom: '1px solid rgba(255,255,255,0.06)',
                     }}
                   >
-                    <span style={{ color: 'var(--lime)', fontSize: 12, marginTop: 2, flexShrink: 0 }}>●</span>
+                    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" style={{ flexShrink: 0, marginTop: 4 }}><circle cx="3" cy="3" r="2.5" fill="#bffd11"/></svg>
                     <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.45 }}>
                       {feat}
                     </span>

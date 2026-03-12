@@ -27,7 +27,7 @@ const cardVariants: Variants = {
   }),
 }
 
-export default function SlideProblem2({ personalization, onNext, onPrev }: SlideProps) {
+export default function SlideProblem2(_: SlideProps) {
   const { t } = useLanguage()
 
   const risks = [

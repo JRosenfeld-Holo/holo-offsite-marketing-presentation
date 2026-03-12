@@ -28,6 +28,10 @@ const rightBenefits = [
     title: 'Take back control of your IoT spending',
     body: 'Gain unprecedented visibility into your connectivity costs with detailed data usage reporting that prevents budget overruns.',
   },
+  {
+    title: 'Real-time visibility across your fleet',
+    body: 'Monitor every device from a single dashboard — track connectivity health, data usage, and network status across thousands of devices in real time.',
+  },
 ]
 
 export default function SlideSupercharge(_: SlideProps) {

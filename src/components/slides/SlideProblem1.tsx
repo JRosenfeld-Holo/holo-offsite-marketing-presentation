@@ -27,7 +27,7 @@ const cardVariants: Variants = {
   }),
 }
 
-export default function SlideProblem1({ personalization, onNext, onPrev }: SlideProps) {
+export default function SlideProblem1(_: SlideProps) {
   const { t } = useLanguage()
 
   const cards = [
@@ -66,23 +66,6 @@ export default function SlideProblem1({ personalization, onNext, onPrev }: Slide
         }}
       />
 
-      {/* Red pulsing glow — center */}
-      <motion.div
-        animate={{ opacity: [0.4, 0.8, 0.4] }}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-        style={{
-          position: 'absolute',
-          top: '30%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '60%',
-          height: '50%',
-          background:
-            'radial-gradient(ellipse at center, rgba(255,50,30,0.08) 0%, transparent 65%)',
-          pointerEvents: 'none',
-          zIndex: 0,
-        }}
-      />
 
       {/* Red accent glow — bottom right */}
       <div

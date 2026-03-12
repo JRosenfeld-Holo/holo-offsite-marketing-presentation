@@ -309,8 +309,9 @@ export default function SlideGlobe({ personalization, onNext, onPrev }: SlidePro
                   padding: '6px 8px',
                 }}>
                   <span className="font-mono-brand" style={{ fontSize: '8px', color: 'rgba(255,255,255,0.4)', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'block', marginBottom: '2px' }}>Status</span>
-                  <span className="font-roobert" style={{ fontSize: '12px', color: 'var(--lime)', fontWeight: 600 }}>
-                    ✓ Covered
+                  <span className="font-roobert" style={{ fontSize: '12px', color: 'var(--lime)', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5l2.5 2.5 4.5-4.5" stroke="#bffd11" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    Covered
                   </span>
                 </div>
                 <div style={{

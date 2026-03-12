@@ -25,8 +25,7 @@ import SlideCustomers from './slides/SlideCustomers'
 import SlideVerkada from './slides/SlideVerkada'
 import SlideFarmersFridge from './slides/SlideFarmersFridge'
 import SlideSundayPower from './slides/SlideSundayPower'
-import SlideCapabilities1 from './slides/SlideCapabilities1'
-import SlideCapabilities2 from './slides/SlideCapabilities2'
+import SlideCapabilities from './slides/SlideCapabilities'
 import SlideSupercharge from './slides/SlideSupercharge'
 import SlideDemo from './slides/SlideDemo'
 import SlideCalculator from './slides/SlideCalculator'
@@ -51,8 +50,7 @@ const SLIDE_COMPONENTS = [
   SlideVerkada,
   SlideFarmersFridge,
   SlideSundayPower,
-  SlideCapabilities1,
-  SlideCapabilities2,
+  SlideCapabilities,
   SlideSupercharge,
   SlideDemo,
   SlideTailored,
@@ -353,12 +351,11 @@ export default function DeckPresenter() {
                   {/* Divider */}
                   <div style={{ width: '1px', height: '16px', background: 'rgba(255,255,255,0.1)', flexShrink: 0 }} />
 
-                  {/* Language toggle */}
-                  <motion.button
-                    onClick={() => setLang(lang === 'en' ? 'es' : 'en')}
+                  {/* Language selector */}
+                  <select
+                    value={lang}
+                    onChange={(e) => setLang(e.target.value as typeof lang)}
                     className="cursor-pointer font-mono-brand"
-                    whileHover={{ scale: 1.08 }}
-                    whileTap={{ scale: 0.92 }}
                     style={{
                       background: 'rgba(191,253,17,0.08)',
                       border: '1px solid rgba(191,253,17,0.2)',
@@ -369,11 +366,18 @@ export default function DeckPresenter() {
                       color: 'var(--lime)',
                       flexShrink: 0,
                       fontWeight: 600,
+                      outline: 'none',
+                      appearance: 'none',
+                      WebkitAppearance: 'none',
+                      cursor: 'pointer',
                     }}
-                    title={lang === 'en' ? 'Switch to Spanish' : 'Cambiar a inglés'}
                   >
-                    {lang === 'en' ? 'ES' : 'EN'}
-                  </motion.button>
+                    <option value="en" style={{ background: '#00040f', color: '#bffd11' }}>EN</option>
+                    <option value="es" style={{ background: '#00040f', color: '#bffd11' }}>ES</option>
+                    <option value="it" style={{ background: '#00040f', color: '#bffd11' }}>IT</option>
+                    <option value="sv" style={{ background: '#00040f', color: '#bffd11' }}>SV</option>
+                    <option value="de" style={{ background: '#00040f', color: '#bffd11' }}>DE</option>
+                  </select>
 
                   {/* Personalize */}
                   <motion.button
