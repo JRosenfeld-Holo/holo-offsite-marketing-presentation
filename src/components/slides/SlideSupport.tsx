@@ -315,20 +315,11 @@ export default function SlideSupport(_: SlideProps) {
                   opacity: 0.55,
                 }}
               >
-                <svg width="16" height="16" viewBox="0 0 40 40" fill="none">
-                  <circle cx="20" cy="20" r="20" fill="#FF492C" />
-                  <text
-                    x="20"
-                    y="27"
-                    textAnchor="middle"
-                    fill="white"
-                    fontSize="22"
-                    fontWeight="700"
-                    fontFamily="Arial, sans-serif"
-                  >
-                    G
-                  </text>
-                </svg>
+                <img
+                  src="/logos/G2_Crowd_logo.svg"
+                  alt="G2"
+                  style={{ width: 16, height: 16, display: 'block' }}
+                />
                 <span
                   className="font-mono-brand"
                   style={{
