@@ -320,16 +320,6 @@ export default function SlideSupport(_: SlideProps) {
                   alt="G2"
                   style={{ width: 16, height: 16, display: 'block' }}
                 />
-                <span
-                  className="font-mono-brand"
-                  style={{
-                    fontSize: 9,
-                    color: 'rgba(255,255,255,0.45)',
-                    letterSpacing: '0.08em',
-                  }}
-                >
-                  G2 Review
-                </span>
               </div>
             </motion.div>
           ))}

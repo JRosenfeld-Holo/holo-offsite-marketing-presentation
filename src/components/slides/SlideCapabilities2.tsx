@@ -158,13 +158,18 @@ export default function SlideCapabilities2(_: SlideProps) {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + i * 0.1, ease: 'easeOut' }}
-              className="glass-card"
+              whileHover={{
+                y: -4,
+                transition: { type: 'spring', stiffness: 400, damping: 20 },
+              }}
+              className="glass-card pillar-card border-shimmer"
               style={{
                 borderRadius: 14,
                 padding: '28px 24px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 16,
+                position: 'relative',
               }}
             >
               {/* Icon */}
@@ -196,21 +201,25 @@ export default function SlideCapabilities2(_: SlideProps) {
               {/* Feature list */}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 0, marginTop: 'auto' }}>
                 {col.features.map((feat) => (
-                  <div
+                  <motion.div
                     key={feat}
+                    whileHover={{ x: 3, transition: { type: 'spring', stiffness: 400, damping: 25 } }}
                     style={{
                       display: 'flex',
                       alignItems: 'flex-start',
                       gap: 10,
                       padding: '8px 0',
                       borderBottom: '1px solid rgba(255,255,255,0.06)',
+                      transition: 'background 0.2s ease',
+                      borderRadius: 4,
+                      cursor: 'default',
                     }}
                   >
-                    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" style={{ flexShrink: 0, marginTop: 4 }}><circle cx="3" cy="3" r="2.5" fill="#bffd11"/></svg>
+                    <svg width="6" height="6" viewBox="0 0 6 6" fill="none" style={{ flexShrink: 0, marginTop: 4 }}><circle cx="3" cy="3" r="2.5" fill="#bffd11" /></svg>
                     <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.45 }}>
                       {feat}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

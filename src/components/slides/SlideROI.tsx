@@ -99,8 +99,8 @@ export default function SlideROI(_: SlideProps) {
   ]
 
   const quotes = [
-    { text: t('roi.quote1'), company: "FARMER'S FRIDGE", logo: '/logos/customers/farmers-fridge-logo.avif' },
-    { text: t('roi.quote2'), company: 'VERKADA', logo: '/logos/customers/verkada-logo.png' },
+    { text: t('roi.quote1'), company: "FARMER'S FRIDGE", logo: '/logos/customers/farmers-fridge-logo.avif', logoHeight: 13 },
+    { text: t('roi.quote2'), company: 'VERKADA', logo: '/logos/customers/verkada-logo.png', logoHeight: 22 },
   ]
 
   useEffect(() => {
@@ -241,7 +241,7 @@ export default function SlideROI(_: SlideProps) {
                   src={quote.logo}
                   alt={quote.company}
                   style={{
-                    height: 13,
+                    height: quote.logoHeight,
                     width: 'auto',
                     display: 'block',
                     filter: 'brightness(0) invert(1)',

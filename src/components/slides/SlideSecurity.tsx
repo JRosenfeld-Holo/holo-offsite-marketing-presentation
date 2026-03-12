@@ -74,7 +74,7 @@ export default function SlideSecurity(_: SlideProps) {
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: 16,
+            gap: 14,
             flex: 1,
             minHeight: 0,
           }}
@@ -92,10 +92,10 @@ export default function SlideSecurity(_: SlideProps) {
               className="glass-card pillar-card"
               style={{
                 borderRadius: 12,
-                padding: '22px 22px 18px',
+                padding: '16px 18px 14px',
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 8,
+                gap: 6,
                 borderTop: `2px solid ${pt.color}`,
                 position: 'relative',
               }}
@@ -103,17 +103,17 @@ export default function SlideSecurity(_: SlideProps) {
               {/* Icon circle */}
               <div
                 style={{
-                  width: 36,
-                  height: 36,
-                  borderRadius: 10,
+                  width: 30,
+                  height: 30,
+                  borderRadius: 8,
                   background: `${pt.color}12`,
                   border: `1px solid ${pt.color}33`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: 16,
+                  fontSize: 14,
                   flexShrink: 0,
-                  marginBottom: 4,
+                  marginBottom: 2,
                 }}
               >
                 <svg width="18" height="18" fill="none" viewBox="0 0 24 24">
@@ -153,10 +153,10 @@ export default function SlideSecurity(_: SlideProps) {
                 </svg>
               </div>
 
-              <p className="font-roobert" style={{ fontSize: 14, fontWeight: 600, color: '#ffffff', lineHeight: 1.35 }}>
+              <p className="font-roobert" style={{ fontSize: 13, fontWeight: 600, color: '#ffffff', lineHeight: 1.35 }}>
                 {pt.title}
               </p>
-              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.48)', lineHeight: 1.6 }}>
+              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.48)', lineHeight: 1.55 }}>
                 {pt.body}
               </p>
             </motion.div>
