@@ -121,7 +121,7 @@ export default function SlideSundayPower(_: SlideProps) {
             transition={{ duration: 0.5, delay: 0.3 }}
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
               Sunday Power is Norway&apos;s largest Solar as a Service provider, operating 100+ commercial
               rooftop solar installations. Their monitoring systems require persistent connectivity to
               track energy production, report to grid operators, and ensure every kWh is accounted for.
@@ -133,12 +133,12 @@ export default function SlideSundayPower(_: SlideProps) {
               className="quote-block"
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
-              <p className="font-roobert" style={{ fontSize: 17, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
+              <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
                 &quot;I have a greater deal of trust with Hologram than I had with our previous provider.&quot;
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/Sunday-Power-White.png" alt="Sunday Power" style={{ height: 11, width: 'auto', display: 'block', opacity: 0.4 }} />
-                <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
+                <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
                   Endre Ulberg, Software Engineer
                 </span>
               </div>
@@ -147,7 +147,7 @@ export default function SlideSundayPower(_: SlideProps) {
             {/* Challenges / Solutions */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
-                <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
+                <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
                   Previous challenges
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -159,7 +159,7 @@ export default function SlideSundayPower(_: SlideProps) {
                       style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}
                     >
                       <XIcon />
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
+                      <span style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
                     </motion.div>
                   ))}
                 </div>

@@ -167,7 +167,7 @@ export default function SlideVerkada(_: SlideProps) {
             transition={{ duration: 0.5, delay: 0.3 }}
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
               Verkada has a huge footprint in the physical security industry with video security
               cameras, access control, environmental sensors, and alarm products. To expand their
               reach and create new revenue streams, they needed a connectivity partner that could
@@ -180,12 +180,12 @@ export default function SlideVerkada(_: SlideProps) {
               className="quote-block"
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
-              <p className="font-roobert" style={{ fontSize: 17, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
+              <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
                 "Partnering with Hologram was definitely the right decision for our team. It allowed us to get to market much faster."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/verkada-logo.png" alt="Verkada" style={{ height: 11, width: 'auto', display: 'block', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
-                <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
+                <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
                   Max Shen, Sr. Product Marketing Manager
                 </span>
               </div>
@@ -194,7 +194,7 @@ export default function SlideVerkada(_: SlideProps) {
             {/* Challenges / Solutions */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
-                <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
+                <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
                   Previous challenges
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -206,7 +206,7 @@ export default function SlideVerkada(_: SlideProps) {
                       style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}
                     >
                       <XIcon />
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
+                      <span style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
                     </motion.div>
                   ))}
                 </div>

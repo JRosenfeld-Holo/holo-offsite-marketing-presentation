@@ -165,7 +165,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
             transition={{ duration: 0.5, delay: 0.35 }}
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
               Farmer's Fridge operates 2,000+ smart vending machines across 22 US markets,
               delivering fresh meals 24/7. Their machines depend on always-on connectivity to
               process transactions, manage inventory, and ensure food freshness. Any connectivity
@@ -179,12 +179,12 @@ export default function SlideFarmersFridge(_: SlideProps) {
               className="quote-block"
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
-              <p className="font-roobert" style={{ fontSize: 17, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
+              <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
                 "When someone's hungry, you don't want to disappoint. Our partnership with Hologram delivered significantly lower costs, better service, and more uptime reliability."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/farmers-fridge-logo.avif" alt="Farmer's Fridge" style={{ height: 11, width: 'auto', display: 'block', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
-                <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
+                <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
                   Luke Saunders, Founder &amp; CEO
                 </span>
               </div>
@@ -193,7 +193,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
             {/* Challenges / Solutions */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
-                <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
+                <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
                   Previous challenges
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -205,7 +205,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
                       style={{ display: 'flex', alignItems: 'flex-start', gap: 8 }}
                     >
                       <XIcon />
-                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
+                      <span style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.5 }}>{item}</span>
                     </motion.div>
                   ))}
                 </div>
