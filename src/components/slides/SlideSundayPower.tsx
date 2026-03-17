@@ -6,23 +6,6 @@ import type { SlideProps } from '@/types/slide'
 import { useLanguage } from '@/lib/i18n'
 import VideoLightbox from '../VideoLightbox'
 
-const challenges = [
-  'Connectivity outages caused loss of critical data and revenue',
-  'Unreliable APIs from previous provider',
-  "Pricing models weren't cost-effective",
-]
-
-const solutions = [
-  'Superior technical platform',
-  'Pay-as-you-go pricing',
-  'Powerful device management tools',
-]
-
-const metrics = [
-  { value: '100+', label: 'SOLAR INSTALLATIONS' },
-  { value: '19.5B kWh', label: 'ENERGY PRODUCED ANNUALLY' },
-  { value: '4,500 tons', label: 'CARBON OFFSET PER YEAR' },
-]
 
 function XIcon() {
   return (
@@ -43,6 +26,25 @@ function CheckIcon() {
 export default function SlideSundayPower(_: SlideProps) {
   const { t } = useLanguage()
   const [showVideo, setShowVideo] = useState(false)
+
+  const challenges = [
+    t('sp.challenge1'),
+    t('sp.challenge2'),
+    t('sp.challenge3'),
+  ]
+
+  const solutions = [
+    t('sp.solution1'),
+    t('sp.solution2'),
+    t('sp.solution3'),
+  ]
+
+  const metrics = [
+    { value: '100+', label: t('sp.metric1') },
+    { value: '19.5B kWh', label: t('sp.metric2') },
+    { value: '4,500 tons', label: t('sp.metric3') },
+  ]
+
   return (
     <div className="slide-base" style={{ background: '#00040f' }}>
       <style>{`.sp-play-overlay:hover { opacity: 1 !important; }`}</style>
@@ -88,8 +90,8 @@ export default function SlideSundayPower(_: SlideProps) {
               className="font-roobert"
               style={{ fontSize: 52, fontWeight: 600, color: '#ffffff', lineHeight: 1.08, maxWidth: 600 }}
             >
-              Accelerating Norway&apos;s{' '}
-              <span style={{ color: 'var(--lime)' }}>renewable energy</span> transition
+              {t('sp.title')}{' '}
+              <span style={{ color: 'var(--lime)' }}>{t('sp.titleAccent')}</span>{t('sp.titleSuffix') ? ' ' + t('sp.titleSuffix') : ''}
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, x: 16 }}
@@ -122,9 +124,7 @@ export default function SlideSundayPower(_: SlideProps) {
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
             <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-              Sunday Power is Norway&apos;s largest Solar as a Service provider, operating 100+ commercial
-              rooftop solar installations. Their monitoring systems require persistent connectivity to
-              track energy production, report to grid operators, and ensure every kWh is accounted for.
+              {t('sp.description')}
             </p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -134,12 +134,12 @@ export default function SlideSundayPower(_: SlideProps) {
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
               <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
-                &quot;I have a greater deal of trust with Hologram than I had with our previous provider.&quot;
+                {t('sp.quote')}
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/Sunday-Power-White.png" alt="Sunday Power" style={{ height: 11, width: 'auto', display: 'block', opacity: 0.4 }} />
                 <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
-                  Endre Ulberg, Software Engineer
+                  {t('sp.quoteAuthor')}
                 </span>
               </div>
             </motion.div>
@@ -148,7 +148,7 @@ export default function SlideSundayPower(_: SlideProps) {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Previous challenges
+                  {t('case.previousChallenges')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {challenges.map((item) => (
@@ -166,7 +166,7 @@ export default function SlideSundayPower(_: SlideProps) {
               </div>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Hologram&apos;s solution
+                  {t('case.hologramSolution')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {solutions.map((item) => (
@@ -222,7 +222,7 @@ export default function SlideSundayPower(_: SlideProps) {
             {/* Watch video badge */}
             <div style={{ position: 'absolute', bottom: 14, left: 14, zIndex: 5, display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(0,4,15,0.75)', border: '1px solid rgba(191,253,17,0.2)', borderRadius: 20, padding: '4px 10px', backdropFilter: 'blur(8px)' }}>
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 1.5l7 3.5-7 3.5V1.5z" fill="#bffd11" /></svg>
-              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>WATCH STORY</span>
+              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>{t('case.watchStory')}</span>
             </div>
           </motion.div>
         </div>

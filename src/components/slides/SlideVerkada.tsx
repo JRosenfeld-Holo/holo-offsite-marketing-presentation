@@ -6,26 +6,6 @@ import type { SlideProps } from '@/types/slide'
 import { useLanguage } from '@/lib/i18n'
 import VideoLightbox from '../VideoLightbox'
 
-const challenges = [
-  "Customers couldn't connect in remote or difficult areas",
-  'Customers worldwide needed the same experience',
-  'Reliance on unreliable network infrastructure',
-  'Poor network speeds for high-quality video',
-]
-
-const solutions = [
-  'Pre-integrated SIM with immediate connectivity',
-  'The same SIM in every device, anywhere in the world',
-  'Manage and troubleshoot SIMs remotely',
-  'Multi-carrier redundancy',
-  'Performance to stream high quality video',
-]
-
-const metrics = [
-  { value: '33,000+', label: 'CUSTOMERS WORLDWIDE' },
-  { value: '28,000+', label: 'DEVICES WITH HOLOGRAM' },
-  { value: '85', label: 'COUNTRIES SERVED' },
-]
 
 function XIcon() {
   return (
@@ -89,6 +69,28 @@ function PlayOverlay({ onClick }: { onClick: () => void }) {
 export default function SlideVerkada(_: SlideProps) {
   const { t } = useLanguage()
   const [showVideo, setShowVideo] = useState(false)
+
+  const challenges = [
+    t('verkada.challenge1'),
+    t('verkada.challenge2'),
+    t('verkada.challenge3'),
+    t('verkada.challenge4'),
+  ]
+
+  const solutions = [
+    t('verkada.solution1'),
+    t('verkada.solution2'),
+    t('verkada.solution3'),
+    t('verkada.solution4'),
+    t('verkada.solution5'),
+  ]
+
+  const metrics = [
+    { value: '33,000+', label: t('verkada.metric1') },
+    { value: '28,000+', label: t('verkada.metric2') },
+    { value: '85', label: t('verkada.metric3') },
+  ]
+
   return (
     <div className="slide-base" style={{ background: '#00040f' }}>
       <style>{`.play-overlay:hover { opacity: 1 !important; }`}</style>
@@ -134,7 +136,7 @@ export default function SlideVerkada(_: SlideProps) {
               className="font-roobert"
               style={{ fontSize: 52, fontWeight: 600, color: '#ffffff', lineHeight: 1.08, maxWidth: 600 }}
             >
-              Creating new revenue streams with{' '}
+              {t('verkada.title')}{' '}
               <span style={{ color: 'var(--lime)' }}>Hologram</span>
             </motion.h2>
             <motion.div
@@ -168,10 +170,7 @@ export default function SlideVerkada(_: SlideProps) {
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
             <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-              Verkada has a huge footprint in the physical security industry with video security
-              cameras, access control, environmental sensors, and alarm products. To expand their
-              reach and create new revenue streams, they needed a connectivity partner that could
-              match their global ambition and deliver reliable performance at scale.
+              {t('verkada.description')}
             </p>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -181,12 +180,12 @@ export default function SlideVerkada(_: SlideProps) {
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
               <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
-                "Partnering with Hologram was definitely the right decision for our team. It allowed us to get to market much faster."
+                {t('verkada.quote')}
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/verkada-logo.png" alt="Verkada" style={{ height: 11, width: 'auto', display: 'block', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
                 <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
-                  Max Shen, Sr. Product Marketing Manager
+                  {t('verkada.quoteAuthor')}
                 </span>
               </div>
             </motion.div>
@@ -195,7 +194,7 @@ export default function SlideVerkada(_: SlideProps) {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Previous challenges
+                  {t('case.previousChallenges')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {challenges.map((item) => (
@@ -213,7 +212,7 @@ export default function SlideVerkada(_: SlideProps) {
               </div>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Hologram's solution
+                  {t('case.hologramSolution')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {solutions.map((item) => (
@@ -253,7 +252,7 @@ export default function SlideVerkada(_: SlideProps) {
             {/* Watch video badge */}
             <div style={{ position: 'absolute', bottom: 14, left: 14, zIndex: 5, display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(0,4,15,0.75)', border: '1px solid rgba(191,253,17,0.2)', borderRadius: 20, padding: '4px 10px', backdropFilter: 'blur(8px)' }}>
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 1.5l7 3.5-7 3.5V1.5z" fill="#bffd11" /></svg>
-              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>WATCH STORY</span>
+              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>{t('case.watchStory')}</span>
             </div>
           </motion.div>
         </div>

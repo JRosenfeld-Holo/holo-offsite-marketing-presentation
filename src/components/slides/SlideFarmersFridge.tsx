@@ -6,25 +6,6 @@ import type { SlideProps } from '@/types/slide'
 import { useLanguage } from '@/lib/i18n'
 import VideoLightbox from '../VideoLightbox'
 
-const challenges = [
-  'Complex deployments across 22 US markets',
-  'Limited expansion to challenging locations',
-  'Inconsistent connectivity impacted revenue',
-  'High connectivity costs eating margins',
-]
-
-const solutions = [
-  'One contract with 550+ carriers globally',
-  'Reliable connectivity in previously difficult locations',
-  'Multi-carrier redundancy',
-  '50% reduction in connectivity costs',
-]
-
-const metrics = [
-  { value: '2,000+', label: 'SMART FRIDGES' },
-  { value: '10M+', label: 'MEALS SERVED' },
-  { value: '50%', label: 'CONNECTIVITY COST REDUCTION' },
-]
 
 function XIcon() {
   return (
@@ -45,6 +26,27 @@ function CheckIcon() {
 export default function SlideFarmersFridge(_: SlideProps) {
   const { t } = useLanguage()
   const [showVideo, setShowVideo] = useState(false)
+
+  const challenges = [
+    t('ff.challenge1'),
+    t('ff.challenge2'),
+    t('ff.challenge3'),
+    t('ff.challenge4'),
+  ]
+
+  const solutions = [
+    t('ff.solution1'),
+    t('ff.solution2'),
+    t('ff.solution3'),
+    t('ff.solution4'),
+  ]
+
+  const metrics = [
+    { value: '2,000+', label: t('ff.metric1') },
+    { value: '10M+', label: t('ff.metric2') },
+    { value: '50%', label: t('ff.metric3') },
+  ]
+
   return (
     <div className="slide-base" style={{ background: '#00040f' }}>
       <style>{`.ff-play-overlay:hover { opacity: 1 !important; }`}</style>
@@ -90,8 +92,8 @@ export default function SlideFarmersFridge(_: SlideProps) {
               className="font-roobert"
               style={{ fontSize: 52, fontWeight: 600, color: '#ffffff', lineHeight: 1.08, maxWidth: 600 }}
             >
-              Seamless business operations{' '}
-              <span style={{ color: 'var(--lime)' }}>nation-wide</span>
+              {t('ff.title')}{' '}
+              <span style={{ color: 'var(--lime)' }}>{t('ff.titleAccent')}</span>
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, x: 16 }}
@@ -154,7 +156,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
             {/* Watch video badge */}
             <div style={{ position: 'absolute', bottom: 14, right: 14, zIndex: 5, display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(0,4,15,0.75)', border: '1px solid rgba(191,253,17,0.2)', borderRadius: 20, padding: '4px 10px', backdropFilter: 'blur(8px)' }}>
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 1.5l7 3.5-7 3.5V1.5z" fill="#bffd11" /></svg>
-              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>WATCH STORY</span>
+              <span className="font-mono-brand" style={{ fontSize: 9, color: 'rgba(191,253,17,0.8)', letterSpacing: '0.1em' }}>{t('case.watchStory')}</span>
             </div>
           </motion.div>
 
@@ -166,10 +168,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
             style={{ flex: '1 1 55%', display: 'flex', flexDirection: 'column', gap: 16 }}
           >
             <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.6)', lineHeight: 1.7 }}>
-              Farmer's Fridge operates 2,000+ smart vending machines across 22 US markets,
-              delivering fresh meals 24/7. Their machines depend on always-on connectivity to
-              process transactions, manage inventory, and ensure food freshness. Any connectivity
-              failure directly impacts revenue and customer satisfaction.
+              {t('ff.description')}
             </p>
 
             <motion.div
@@ -180,12 +179,12 @@ export default function SlideFarmersFridge(_: SlideProps) {
               style={{ paddingTop: 4, paddingBottom: 4 }}
             >
               <p className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.78)', lineHeight: 1.55, fontStyle: 'italic' }}>
-                "When someone's hungry, you don't want to disappoint. Our partnership with Hologram delivered significantly lower costs, better service, and more uptime reliability."
+                {t('ff.quote')}
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
                 <img src="/logos/customers/farmers-fridge-logo.avif" alt="Farmer's Fridge" style={{ height: 11, width: 'auto', display: 'block', filter: 'brightness(0) invert(1)', opacity: 0.4 }} />
                 <span className="font-mono-brand" style={{ fontSize: 11, color: 'rgba(255,255,255,0.28)', letterSpacing: '0.07em' }}>
-                  Luke Saunders, Founder &amp; CEO
+                  {t('ff.quoteAuthor')}
                 </span>
               </div>
             </motion.div>
@@ -194,7 +193,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Previous challenges
+                  {t('case.previousChallenges')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {challenges.map((item) => (
@@ -212,7 +211,7 @@ export default function SlideFarmersFridge(_: SlideProps) {
               </div>
               <div>
                 <p className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
-                  Hologram's solution
+                  {t('case.hologramSolution')}
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                   {solutions.map((item) => (

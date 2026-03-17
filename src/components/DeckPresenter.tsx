@@ -377,6 +377,7 @@ export default function DeckPresenter() {
                     <option value="it" style={{ background: '#00040f', color: '#bffd11' }}>IT</option>
                     <option value="sv" style={{ background: '#00040f', color: '#bffd11' }}>SV</option>
                     <option value="de" style={{ background: '#00040f', color: '#bffd11' }}>DE</option>
+                    <option value="zh" style={{ background: '#00040f', color: '#bffd11' }}>ZH</option>
                   </select>
 
                   {/* Personalize */}
