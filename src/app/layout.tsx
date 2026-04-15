@@ -3,8 +3,8 @@ import Script from 'next/script'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Hologram — Outage Proof Cellular Connectivity',
-  description: 'The only IoT connectivity platform that stops outages before they happen.',
+  title: 'Hologram — GTM Engineering Playbook',
+  description: '50 Engineers. 300-Person Output. How Hologram delivers a 6x productivity multiplier through AI, automation, and systems thinking.',
   icons: {
     icon: '/logos/logo_mark_lime.svg',
   },

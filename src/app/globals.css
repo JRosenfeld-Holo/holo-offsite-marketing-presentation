@@ -60,13 +60,13 @@
   --white: #ffffff;
 
   /* Glassmorphism tokens */
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-bg-hover: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.09);
-  --glass-border-hover: rgba(191, 253, 17, 0.28);
+  --glass-bg: rgba(255, 255, 255, 0.055);
+  --glass-bg-hover: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --glass-border-hover: rgba(191, 253, 17, 0.32);
   --glass-blur: blur(24px) saturate(180%);
-  --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.04);
-  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(191, 253, 17, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 60px rgba(191, 253, 17, 0.018);
+  --glass-shadow-hover: 0 20px 56px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(191, 253, 17, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.10), inset 0 0 60px rgba(191, 253, 17, 0.03);
 }
 
 /* ── Base ── */
@@ -684,6 +684,179 @@ canvas {
   border-color: rgba(191, 253, 17, 0.2);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════════
+   "300" FILM THEME — GTM ENGINEERING DECK
+   ══════════════════════════════════════════ */
+
+/* Angular war-card — clipped corners, Spartan precision */
+.war-card {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition:
+    background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.war-card:hover {
+  background: var(--glass-bg-hover);
+  border-color: rgba(191, 253, 17, 0.28);
+  box-shadow: var(--glass-shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Oversized battle metric number — layered glow for projector impact */
+.battle-counter {
+  font-family: 'Roobert', sans-serif;
+  font-weight: 700;
+  color: var(--lime);
+  line-height: 1;
+  text-shadow:
+    0 0 20px rgba(191, 253, 17, 0.6),
+    0 0 50px rgba(191, 253, 17, 0.35),
+    0 0 100px rgba(191, 253, 17, 0.15);
+}
+
+/* Spear / blade horizontal rule — with central diamond node */
+.spear-divider {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(191, 253, 17, 0.45) 20%,
+    rgba(191, 253, 17, 0.85) 50%,
+    rgba(191, 253, 17, 0.45) 80%,
+    transparent 100%
+  );
+}
+
+.spear-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 5px;
+  height: 5px;
+  background: rgba(191, 253, 17, 0.9);
+  box-shadow: 0 0 6px rgba(191, 253, 17, 0.8), 0 0 14px rgba(191, 253, 17, 0.35);
+}
+
+/* Phalanx dot-grid background texture */
+.phalanx-bg {
+  background-image: radial-gradient(circle, rgba(191, 253, 17, 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Category eyebrow badge — slide section label ── */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'MessinaSansMono', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(191, 253, 17, 0.9);
+  background: rgba(191, 253, 17, 0.07);
+  border: 1px solid rgba(191, 253, 17, 0.22);
+  border-radius: 3px;
+  padding: 5px 14px;
+  margin-bottom: 10px;
+}
+
+/* Roman numeral / law index label */
+.law-numeral {
+  font-family: 'MessinaSansMono', monospace;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--lime);
+  text-transform: uppercase;
+}
+
+/* Scan-line sweep for hero/title slide */
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent 0%, rgba(191, 253, 17, 0.35) 40%, rgba(191, 253, 17, 0.6) 50%, rgba(191, 253, 17, 0.35) 60%, transparent 100%);
+  animation: scan-sweep 7s linear infinite;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Comparison table helpers */
+.compare-row-dim {
+  color: rgba(255, 255, 255, 0.38);
+}
+.compare-row-lit {
+  color: #ffffff;
+}
+.compare-check {
+  color: var(--lime);
+  font-weight: 700;
+}
+
+/* Law row hover — left bar slide */
+.law-row-hover {
+  transition:
+    background 0.22s ease,
+    border-color 0.22s ease,
+    padding-left 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  padding-left: 0 !important;
+}
+.law-row-hover:hover {
+  background: rgba(191, 253, 17, 0.04);
+  border-left-color: rgba(191, 253, 17, 0.6) !important;
+  padding-left: 8px !important;
+}
+
+/* Comparison row hover */
+.compare-row-hover {
+  transition: background 0.2s ease;
+  border-radius: 4px;
+}
+.compare-row-hover:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Stacked system layer */
+.system-layer {
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.system-layer:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px);
 }
 
 /* ── Reduced Motion ── */
