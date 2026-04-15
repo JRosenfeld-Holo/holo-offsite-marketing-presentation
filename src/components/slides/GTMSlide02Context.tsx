@@ -46,7 +46,7 @@ export default function GTMSlide02Context({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(32px, 3.8vw, 50px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE ASYMMETRIC ADVANTAGE
           </div>
-          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.45)', marginBottom: 12 }}>
+          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.88)', marginBottom: 12 }}>
             WE ARE OUTNUMBERED. But strategy dictates that constraints breed lethal innovation.
           </div>
           <div className="spear-divider" style={{ marginBottom: 14 }} />
@@ -72,18 +72,18 @@ export default function GTMSlide02Context({ onNext, onPrev }: SlideProps) {
 
               {/* Front */}
               <div style={{ ...DIM_CARD, alignItems: 'center', justifyContent: 'space-between', padding: '28px 32px', textAlign: 'center' }}>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.22)' }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)' }}>
                   The Competition
                 </div>
                 <div>
-                  <div className="font-roobert" style={{ fontSize: 'clamp(44px, 5.5vw, 72px)', fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '-0.02em', lineHeight: 1.05, textTransform: 'uppercase' }}>
+                  <div className="font-roobert" style={{ fontSize: 'clamp(44px, 5.5vw, 72px)', fontWeight: 700, color: 'rgba(255,255,255,0.95)', letterSpacing: '-0.02em', lineHeight: 1.05, textTransform: 'uppercase' }}>
                     THE<br />TRADITIONAL<br />INCUMBENTS
                   </div>
-                  <div className="font-roobert" style={{ marginTop: 16, fontSize: 17, color: 'rgba(255,255,255,0.22)', lineHeight: 1.4 }}>
+                  <div className="font-roobert" style={{ marginTop: 16, fontSize: 17, color: 'rgba(255,255,255,0.65)', lineHeight: 1.4 }}>
                     200–500+ person GTM organizations
                   </div>
                 </div>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.16)' }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
                   Tap to reveal →
                 </div>
               </div>
@@ -91,7 +91,7 @@ export default function GTMSlide02Context({ onNext, onPrev }: SlideProps) {
               {/* Back */}
               <div style={{ ...DIM_CARD, transform: 'rotateY(180deg)', padding: '24px 28px', justifyContent: 'space-between' }}>
                 <div>
-                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: 10 }}>
+                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: 10 }}>
                     The Traditional Incumbents
                   </div>
                   <div className="spear-divider" style={{ opacity: 0.2 }} />
@@ -103,12 +103,12 @@ export default function GTMSlide02Context({ onNext, onPrev }: SlideProps) {
                     'They rely on manual headcount to mask broken processes.',
                   ].map((text, i) => (
                     <div key={i} style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                      <span style={{ color: 'rgba(255,255,255,0.2)', fontSize: 26, lineHeight: 1.4, flexShrink: 0 }}>—</span>
-                      <span className="font-roobert" style={{ fontSize: 28, lineHeight: 1.45, color: 'rgba(255,255,255,0.55)' }}>{text}</span>
+                      <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 26, lineHeight: 1.4, flexShrink: 0 }}>—</span>
+                      <span className="font-roobert" style={{ fontSize: 28, lineHeight: 1.45, color: 'rgba(255,255,255,0.9)' }}>{text}</span>
                     </div>
                   ))}
                 </div>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.14)', textAlign: 'center' }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', textAlign: 'center' }}>
                   ← Tap to flip back
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function GTMSlide02Context({ onNext, onPrev }: SlideProps) {
           transition={{ duration: 0.5, delay: 0.9 }}
           style={{ marginTop: 12, display: 'flex', justifyContent: 'center' }}
         >
-          <div className="font-roobert" style={{ fontSize: 18, fontStyle: 'italic', color: 'rgba(255,255,255,0.45)', borderLeft: '2px solid rgba(191,253,17,0.5)', paddingLeft: 16 }}>
+          <div className="font-roobert" style={{ fontSize: 18, fontStyle: 'italic', color: 'rgba(255,255,255,0.88)', borderLeft: '2px solid rgba(191,253,17,0.5)', paddingLeft: 16 }}>
             &ldquo;Then we shall fight in the shade.&rdquo;
           </div>
         </motion.div>

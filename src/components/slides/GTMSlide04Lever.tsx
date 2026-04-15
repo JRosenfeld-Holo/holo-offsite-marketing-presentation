@@ -44,7 +44,7 @@ export default function GTMSlide04Lever({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE CODEBASE OF REVENUE
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 20 }}>
             Every team member operates with the programmatic leverage of six.
           </div>
           <div className="spear-divider" style={{ marginBottom: 28 }} />
@@ -75,7 +75,7 @@ export default function GTMSlide04Lever({ onNext, onPrev }: SlideProps) {
               {/* Thin divider */}
               <div style={{ height: 1, background: 'rgba(191,253,17,0.12)' }} />
               {/* Body */}
-              <p className="font-roobert" style={{ fontSize: 19, lineHeight: 1.65, color: 'rgba(255,255,255,0.6)', flex: 1 }}>
+              <p className="font-roobert" style={{ fontSize: 19, lineHeight: 1.65, color: 'rgba(255,255,255,0.9)', flex: 1 }}>
                 {pillar.body}
               </p>
             </motion.div>
@@ -90,7 +90,7 @@ export default function GTMSlide04Lever({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             The Four Pillars of GTM Engineering
           </span>
         </motion.div>

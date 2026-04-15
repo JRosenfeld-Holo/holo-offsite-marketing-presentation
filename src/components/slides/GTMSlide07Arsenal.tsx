@@ -8,14 +8,14 @@ const sections = [
     title: 'Advanced AI Models',
     items: [
       'Claude & Gemini for hyper-contextual content, strategic analysis, and code generation.',
-      'GPT-4 deployed for complex, multi-modal data processing tasks.',
+      'Exa for deep research and prescriptive target account lists using natural language processing.',
       'Proprietary prompt chains automating highly repeatable cognitive workflows.',
     ],
   },
   {
     title: 'Orchestration & Enrichment',
     items: [
-      'n8n orchestrating logic across 50+ interconnected platforms.',
+      'n8n and Zapier for advanced workflow automations that connect disparate platforms.',
       'Clay unifying data pipelines to process enrichment signals at massive scale.',
       'Programmatic deal nurture triggered strictly by live behavioral intent.',
     ],
@@ -52,7 +52,7 @@ export default function GTMSlide07Arsenal({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE ENGINEERING ARSENAL
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 20 }}>
             Every team member is equipped with the sharpest algorithmic tooling on the battlefield.
           </div>
           <div className="spear-divider" style={{ marginBottom: 24 }} />
@@ -82,7 +82,7 @@ export default function GTMSlide07Arsenal({ onNext, onPrev }: SlideProps) {
                 {section.items.map((item, ii) => (
                   <div key={ii} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
                     <span style={{ color: 'rgba(191,253,17,0.5)', fontSize: 16, marginTop: 4, flexShrink: 0 }}>▸</span>
-                    <span className="font-roobert" style={{ fontSize: 22, lineHeight: 1.5, color: 'rgba(255,255,255,0.75)' }}>
+                    <span className="font-roobert" style={{ fontSize: 22, lineHeight: 1.5, color: 'rgba(255,255,255,0.95)' }}>
                       {item}
                     </span>
                   </div>
@@ -100,7 +100,7 @@ export default function GTMSlide07Arsenal({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             Engineered for Asymmetry
           </span>
         </motion.div>

@@ -96,13 +96,26 @@ function CounterDisplay({
       style={{
         fontSize,
         marginBottom,
-        transition: 'text-shadow 0.5s ease',
-        textShadow: flash
-          ? '0 0 24px rgba(191,253,17,1), 0 0 56px rgba(191,253,17,0.75), 0 0 120px rgba(191,253,17,0.3)'
-          : undefined,
+        position: 'relative',
+        display: 'inline-block',
       }}
     >
-      {value}{suffix}
+      {/* Invisible placeholder reserves the final width */}
+      <span style={{ visibility: 'hidden' }}>{num}{suffix}</span>
+      {/* Animated value overlaid in the same position */}
+      <span
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          transition: 'text-shadow 0.5s ease',
+          textShadow: flash
+            ? '0 0 24px rgba(191,253,17,1), 0 0 56px rgba(191,253,17,0.75), 0 0 120px rgba(191,253,17,0.3)'
+            : undefined,
+        }}
+      >
+        {value}{suffix}
+      </span>
     </div>
   )
 }
@@ -121,7 +134,7 @@ export default function GTMSlide08Results({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             EMPIRICAL DOMINANCE
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 20 }}>
             The architecture&apos;s output is verifiable. The unit economics are unassailable.
           </div>
           <div className="spear-divider" style={{ marginBottom: 24 }} />
@@ -132,12 +145,9 @@ export default function GTMSlide08Results({ onNext, onPrev }: SlideProps) {
 
           {/* Row 1: 3 cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 16, flex: 1 }}>
-            {metrics.slice(0, 3).map((metric, i) => (
-              <motion.div
+            {metrics.slice(0, 3).map((metric) => (
+              <div
                 key={metric.label}
-                initial={{ opacity: 0, scale: 0.85, y: 24 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 + i * 0.1, ease: [0.34, 1.56, 0.64, 1] }}
                 className="war-card metric-card-hover"
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', padding: '24px 28px', cursor: 'default' }}
               >
@@ -152,21 +162,18 @@ export default function GTMSlide08Results({ onNext, onPrev }: SlideProps) {
                   {metric.label}
                 </div>
                 <div style={{ height: 1, width: '100%', background: 'rgba(191,253,17,0.12)', marginBottom: 8 }} />
-                <p className="font-roobert" style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.5)' }}>
+                <p className="font-roobert" style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)' }}>
                   {metric.detail}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Row 2: 2 cards */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, flex: 1 }}>
-            {metrics.slice(3).map((metric, i) => (
-              <motion.div
+            {metrics.slice(3).map((metric) => (
+              <div
                 key={metric.label}
-                initial={{ opacity: 0, scale: 0.85, y: 24 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.45 + i * 0.1, ease: [0.34, 1.56, 0.64, 1] }}
                 className="war-card metric-card-hover"
                 style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 24, padding: '20px 28px', cursor: 'default' }}
               >
@@ -180,11 +187,11 @@ export default function GTMSlide08Results({ onNext, onPrev }: SlideProps) {
                   <div className="font-roobert" style={{ fontSize: 18, fontWeight: 700, color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 6, lineHeight: 1.2 }}>
                     {metric.label}
                   </div>
-                  <p className="font-roobert" style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.5)' }}>
+                  <p className="font-roobert" style={{ fontSize: 17, lineHeight: 1.55, color: 'rgba(255,255,255,0.88)' }}>
                     {metric.detail}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -197,7 +204,7 @@ export default function GTMSlide08Results({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             The Verifiable Output of 50 Engineers
           </span>
         </motion.div>

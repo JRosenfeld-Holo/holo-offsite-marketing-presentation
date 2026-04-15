@@ -244,10 +244,10 @@ export default function GTMSlide01Title({ onNext, onPrev }: SlideProps) {
           transition={{ duration: 0.5, delay: 0.85 }}
           style={{ maxWidth: 460 }}
         >
-          <p className="font-roobert" style={{ fontSize: 15, lineHeight: 1.65, color: 'rgba(255,255,255,0.62)' }}>
+          <p className="font-roobert" style={{ fontSize: 15, lineHeight: 1.65, color: 'rgba(255,255,255,0.9)' }}>
             How Hologram&apos;s GTM Engineering Infrastructure Delivers a
           </p>
-          <p className="font-roobert" style={{ fontSize: 15, lineHeight: 1.65, color: 'rgba(255,255,255,0.62)' }}>
+          <p className="font-roobert" style={{ fontSize: 15, lineHeight: 1.65, color: 'rgba(255,255,255,0.9)' }}>
             <span style={{ color: '#bffd11', fontWeight: 700 }}>6x Productivity Multiplier</span>{' '}
             Through AI, Deep Automation, and Systems Thinking.
           </p>
@@ -272,11 +272,11 @@ export default function GTMSlide01Title({ onNext, onPrev }: SlideProps) {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 18, height: 18 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', letterSpacing: '0.12em' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, color: 'rgba(255,255,255,0.75)', letterSpacing: '0.12em' }}>
             THE GTM ENGINEERING PLAYBOOK
           </span>
         </div>
-        <span className="font-mono-brand" style={{ fontSize: 10, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.08em' }}>
+        <span className="font-mono-brand" style={{ fontSize: 10, color: 'rgba(255,255,255,0.6)', letterSpacing: '0.08em' }}>
           hologram.io
         </span>
       </motion.div>

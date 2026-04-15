@@ -146,7 +146,7 @@ export default function GTMSlide11Conclusion({ onNext, onPrev }: SlideProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 + i * 0.1 }}
               className="font-roobert"
-              style={{ fontSize: 22, lineHeight: 1.6, color: 'rgba(255,255,255,0.62)' }}
+              style={{ fontSize: 22, lineHeight: 1.6, color: 'rgba(255,255,255,0.9)' }}
             >
               {line}
             </motion.p>
@@ -201,7 +201,7 @@ export default function GTMSlide11Conclusion({ onNext, onPrev }: SlideProps) {
         }}
       >
         <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 14, height: 14 }} />
-        <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase' }}>
+        <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.65)', textTransform: 'uppercase' }}>
           Hologram | The GTM Engineering Playbook
         </span>
       </motion.div>

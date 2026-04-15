@@ -74,7 +74,7 @@ export default function GTMSlide06System({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             COMPOUNDING LEVERAGE
           </div>
-          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
+          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.88)', marginBottom: 16 }}>
             A system where every component structurally reinforces the whole.
           </div>
           <div className="spear-divider" style={{ marginBottom: 18 }} />
@@ -92,8 +92,8 @@ export default function GTMSlide06System({ onNext, onPrev }: SlideProps) {
           {systemLayers.map((layer, index) => {
             const widthPct = WIDTHS[index]
             const showDetail = widthPct >= 62
-            // Stack from base up: bottom layer (#06, index 5) animates first
-            const animDelay = 0.12 + (systemLayers.length - 1 - index) * 0.11
+            // Stack from top down: top layer (#01, index 0) animates first
+            const animDelay = 0.12 + index * 0.11
 
             return (
               <motion.div
@@ -201,7 +201,7 @@ export default function GTMSlide06System({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             Each Layer Accelerates the Next
           </span>
         </motion.div>

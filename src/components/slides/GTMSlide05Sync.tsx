@@ -50,7 +50,7 @@ export default function GTMSlide05Sync({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(28px, 3.2vw, 44px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE ALLBOUND SYNCHRONIZATION
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 16 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 16 }}>
             Marketing, BDRs, and AEs no longer exist in silos. We operate a single, algorithmic revenue codebase.
           </div>
           <div className="spear-divider" style={{ marginBottom: 20 }} />
@@ -85,11 +85,11 @@ export default function GTMSlide05Sync({ onNext, onPrev }: SlideProps) {
                   <div className="font-mono-brand" style={{ fontSize: 14, letterSpacing: '0.15em', textTransform: 'uppercase', color: layer.accent, marginBottom: 4 }}>
                     {layer.label}
                   </div>
-                  <p className="font-roobert" style={{ fontSize: 18, lineHeight: 1.55, color: 'rgba(255,255,255,0.6)' }}>
+                  <p className="font-roobert" style={{ fontSize: 18, lineHeight: 1.55, color: 'rgba(255,255,255,0.9)' }}>
                     {layer.body}
                   </p>
                 </div>
-                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.12)', flexShrink: 0, marginTop: 4, fontFamily: 'MessinaSansMono' }}>
+                <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', flexShrink: 0, marginTop: 4, fontFamily: 'MessinaSansMono' }}>
                   {String(i + 1).padStart(2, '0')}
                 </span>
               </motion.div>
@@ -105,7 +105,7 @@ export default function GTMSlide05Sync({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             One Database. Every Channel. Total Synchronization.
           </span>
         </motion.div>

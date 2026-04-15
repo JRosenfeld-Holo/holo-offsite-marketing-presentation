@@ -129,7 +129,7 @@ export default function GTMSlide09Rules({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(28px, 3.2vw, 44px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE FIVE LAWS OF ARCHITECTURE
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 20 }}>
             The non-negotiable principles that sustain the 6x multiplier.
           </div>
           <div className="spear-divider" style={{ marginBottom: 24 }} />
@@ -164,7 +164,7 @@ export default function GTMSlide09Rules({ onNext, onPrev }: SlideProps) {
                   <div className="font-roobert" style={{ fontSize: 19, fontWeight: 700, color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: 5, lineHeight: 1.2 }}>
                     {law.title}
                   </div>
-                  <p className="font-roobert" style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(255,255,255,0.55)' }}>
+                  <p className="font-roobert" style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(255,255,255,0.9)' }}>
                     {law.body}
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export default function GTMSlide09Rules({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             The Laws of GTM Engineering
           </span>
         </motion.div>

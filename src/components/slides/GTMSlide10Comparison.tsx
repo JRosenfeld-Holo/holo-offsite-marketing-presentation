@@ -51,7 +51,7 @@ export default function GTMSlide10Comparison({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE ASYMMETRIC ADVANTAGE
           </div>
-          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.45)', marginBottom: 20 }}>
+          <div className="font-roobert" style={{ fontSize: 20, color: 'rgba(255,255,255,0.88)', marginBottom: 20 }}>
             We dictated the terrain. They walked blindly into the funnel.
           </div>
           <div className="spear-divider" style={{ marginBottom: 20 }} />
@@ -74,7 +74,7 @@ export default function GTMSlide10Comparison({ onNext, onPrev }: SlideProps) {
           >
             <div />
             <div style={{ padding: '0 24px' }}>
-              <span className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.22)' }}>
+              <span className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)' }}>
                 Traditional Incumbents
               </span>
             </div>
@@ -106,7 +106,7 @@ export default function GTMSlide10Comparison({ onNext, onPrev }: SlideProps) {
               >
                 {/* Category */}
                 <div style={{ padding: '10px 12px 10px 4px' }}>
-                  <span className="font-mono-brand" style={{ fontSize: 16, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+                  <span className="font-mono-brand" style={{ fontSize: 16, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.88)' }}>
                     {row.category}
                   </span>
                 </div>
@@ -140,7 +140,7 @@ export default function GTMSlide10Comparison({ onNext, onPrev }: SlideProps) {
           style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 10 }}
         >
           <img src="/logos/logo_mark_lime.svg" alt="" style={{ width: 16, height: 16 }} />
-          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase' }}>
+          <span className="font-mono-brand" style={{ fontSize: 10, letterSpacing: '0.18em', color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase' }}>
             Unfair Terrain
           </span>
         </motion.div>

@@ -50,7 +50,7 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
           <div className="font-roobert" style={{ fontSize: 'clamp(30px, 3.5vw, 46px)', fontWeight: 700, color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.05, marginBottom: 6 }}>
             THE COGNITIVE ALLOCATION
           </div>
-          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.45)', marginBottom: 10 }}>
+          <div className="font-roobert" style={{ fontSize: 18, color: 'rgba(255,255,255,0.88)', marginBottom: 10 }}>
             Why the legacy &ldquo;Thinker vs. Doer&rdquo; model is structurally obsolete.
           </div>
           <div className="spear-divider" style={{ marginBottom: 14 }} />
@@ -76,18 +76,18 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
 
               {/* Front */}
               <div style={{ ...DIM_CARD, alignItems: 'center', justifyContent: 'space-between', padding: '28px 32px', textAlign: 'center' }}>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.22)' }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)' }}>
                   Legacy B2B
                 </div>
                 <div>
-                  <div className="font-roobert" style={{ fontSize: 'clamp(44px, 5.5vw, 72px)', fontWeight: 700, color: 'rgba(255,255,255,0.38)', letterSpacing: '-0.02em', lineHeight: 1.05, textTransform: 'uppercase' }}>
+                  <div className="font-roobert" style={{ fontSize: 'clamp(44px, 5.5vw, 72px)', fontWeight: 700, color: 'rgba(255,255,255,0.95)', letterSpacing: '-0.02em', lineHeight: 1.05, textTransform: 'uppercase' }}>
                     THE<br />INDUSTRIAL<br />TRAP
                   </div>
-                  <div className="font-roobert" style={{ marginTop: 16, fontSize: 17, color: 'rgba(255,255,255,0.22)', lineHeight: 1.4 }}>
+                  <div className="font-roobert" style={{ marginTop: 16, fontSize: 17, color: 'rgba(255,255,255,0.65)', lineHeight: 1.4 }}>
                     How incumbents stay stuck
                   </div>
                 </div>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.16)' }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
                   Tap to reveal →
                 </div>
               </div>
@@ -95,13 +95,13 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
               {/* Back */}
               <div style={{ ...DIM_CARD, transform: 'rotateY(180deg)', padding: '24px 28px', justifyContent: 'space-between' }}>
                 <div>
-                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: 8 }}>
+                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.7)', marginBottom: 8 }}>
                     The Industrial Trap
                   </div>
                   <div className="spear-divider" style={{ opacity: 0.2, marginBottom: 16 }} />
                 </div>
                 <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.62)' }}>
+                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.9)' }}>
                     Traditional organizations separate work by role, not phase. Management owns strategy (
                     <span style={{ color: '#4da6ff', fontWeight: 600 }}>Blue Work</span>
                     ), while frontline SDRs are trapped in endless, manual execution (
@@ -110,14 +110,14 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
                   </p>
                 </div>
                 <div>
-                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.22)', marginBottom: 8 }}>
+                  <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.65)', marginBottom: 8 }}>
                     The Result:
                   </div>
-                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.52)' }}>
+                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.88)' }}>
                     Frontline teams are locked in a &ldquo;heads down&rdquo; state of infinite data entry. Zero authority to pause, analyze, or fix broken processes.
                   </p>
                 </div>
-                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.14)', textAlign: 'center', marginTop: 12 }}>
+                <div className="font-mono-brand" style={{ fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.55)', textAlign: 'center', marginTop: 12 }}>
                   ← Tap to flip back
                 </div>
               </div>
@@ -169,7 +169,7 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
                   <div className="spear-divider" style={{ marginBottom: 16 }} />
                 </div>
                 <div style={{ flex: 1, display: 'flex', alignItems: 'center' }}>
-                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.85)' }}>
+                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.95)' }}>
                     We <Highlight>algorithmically automate</Highlight> baseline{' '}
                     <span style={{ color: '#ff4d4d', fontWeight: 700 }}>Red Work</span>{' '}
                     (repetitive execution, data routing, standard outreach) through our AI infrastructure.
@@ -179,7 +179,7 @@ export default function GTMSlide03Cognitive({ onNext, onPrev }: SlideProps) {
                   <div className="font-mono-brand" style={{ fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(191,253,17,0.6)', marginBottom: 8 }}>
                     The Result:
                   </div>
-                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.85)' }}>
+                  <p className="font-roobert" style={{ fontSize: 26, lineHeight: 1.5, color: 'rgba(255,255,255,0.95)' }}>
                     Our engineers cycle rapidly between{' '}
                     <span style={{ color: '#4da6ff', fontWeight: 700 }}>Blue Work</span>{' '}
                     (analysis, intent mapping, strategy) and high-value{' '}
