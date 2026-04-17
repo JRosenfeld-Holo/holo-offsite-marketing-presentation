@@ -1,6 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { useState, useRef, useCallback } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import type { SlideProps } from '@/types/slide'
 
 const bodyLines = [
@@ -10,6 +11,21 @@ const bodyLines = [
 ]
 
 export default function GTMSlide11Conclusion({ onNext, onPrev }: SlideProps) {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const openLightbox = useCallback(() => {
+    setLightboxOpen(true)
+  }, [])
+
+  const closeLightbox = useCallback(() => {
+    setLightboxOpen(false)
+    if (videoRef.current) {
+      videoRef.current.pause()
+      videoRef.current.currentTime = 0
+    }
+  }, [])
+
   return (
     <div className="w-full h-full absolute inset-0 overflow-hidden" style={{ background: '#00040f' }}>
       {/* Full-screen video background — spear goes through */}
@@ -173,13 +189,36 @@ export default function GTMSlide11Conclusion({ onNext, onPrev }: SlideProps) {
           style={{ width: 240, marginBottom: 32 }}
         />
 
-        {/* Hologram logo */}
+        {/* Hologram logo — clickable to open video lightbox */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 1.2 }}
         >
-          <img src="/logos/Hologram Logo White Text.svg" alt="Hologram" style={{ width: 140, display: 'block', margin: '0 auto' }} />
+          <button
+            onClick={openLightbox}
+            aria-label="Play video"
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              outline: 'none',
+              position: 'relative',
+              display: 'block',
+            }}
+          >
+            <motion.img
+              src="/logos/Hologram Logo White Text.svg"
+              alt="Hologram — click to play video"
+              style={{ width: 140, display: 'block', margin: '0 auto' }}
+              whileHover={{
+                scale: 1.08,
+                filter: 'drop-shadow(0 0 20px rgba(191,253,17,0.6)) drop-shadow(0 0 40px rgba(191,253,17,0.25))',
+              }}
+              transition={{ duration: 0.25 }}
+            />
+          </button>
         </motion.div>
       </div>
 
@@ -205,6 +244,91 @@ export default function GTMSlide11Conclusion({ onNext, onPrev }: SlideProps) {
           Hologram | The GTM Engineering Playbook
         </span>
       </motion.div>
+
+      {/* ── Video Lightbox ── */}
+      <AnimatePresence>
+        {lightboxOpen && (
+          <motion.div
+            key="lightbox-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+            onClick={closeLightbox}
+            style={{
+              position: 'fixed',
+              inset: 0,
+              zIndex: 9999,
+              background: 'rgba(0,0,0,0.92)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              aria-label="Close video"
+              style={{
+                position: 'absolute',
+                top: 24,
+                right: 32,
+                background: 'none',
+                border: 'none',
+                color: 'rgba(255,255,255,0.7)',
+                fontSize: 36,
+                cursor: 'pointer',
+                lineHeight: 1,
+                zIndex: 10000,
+                fontWeight: 300,
+                transition: 'color 0.2s',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#bffd11')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.7)')}
+            >
+              ✕
+            </button>
+
+            {/* Video container */}
+            <motion.div
+              key="lightbox-video"
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.3, delay: 0.05 }}
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                width: '85vw',
+                maxWidth: 1200,
+                aspectRatio: '16 / 9',
+                borderRadius: 12,
+                overflow: 'hidden',
+                boxShadow: '0 0 80px rgba(191,253,17,0.15), 0 0 0 1px rgba(191,253,17,0.12)',
+                cursor: 'default',
+              }}
+            >
+              <video
+                ref={videoRef}
+                autoPlay
+                controls
+                playsInline
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  background: '#000',
+                  display: 'block',
+                }}
+              >
+                <source src="/videos/randy_time.MOV" type="video/quicktime" />
+                <source src="/videos/randy_time.MOV" type="video/mp4" />
+                Your browser does not support this video format.
+              </video>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

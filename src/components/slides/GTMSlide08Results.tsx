@@ -20,13 +20,13 @@ const metrics = [
   {
     num: 147, suffix: '%',
     label: 'Inbound YoY Growth',
-    detail: 'Driven by Answer Engine dominance and instant algorithmic lead routing.',
+    detail: 'Driven by AEO/SEO dominance and precision targeting.',
     delay: 700,
   },
   {
     num: 79, suffix: '%',
     label: 'Lead Cost Reduction',
-    detail: 'Eliminating the overhead of manual data entry and vendor bloat.',
+    detail: 'Eliminating the inefficient tactics and vendor bloat.',
     delay: 850,
   },
   {
